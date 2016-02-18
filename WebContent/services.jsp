@@ -31,7 +31,7 @@
     <center>
       <div class="caption">
         <h3>Teeth Whitening</h3>
-        <i class="fa fa-lock" style="font-size:160px;color:lightblue;"></i>
+        <i class="fa fa-lock" style="font-size:160px;color:lightblue;"></i></a>
          
       </div>
       </center>
