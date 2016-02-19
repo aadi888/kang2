@@ -40,20 +40,20 @@
  
  <script>
 $(document).ready(function(){
-	 $("table").show();
-     
-     $("form").hide();
+	 $("#table").show();
+	
+     $("#form").hide();
      
     $("#legends").click(function(){
-        $("table").show();
+        $("#table").show();
         
-        $("form").hide();
+        $("#form").hide();
     });
     
     $("#schedule").click(function(){
-        $("table").hide();
+        $("#table").hide();
         
-        $("form").show();
+        $("#form").show();
     });
     
 });
@@ -74,7 +74,7 @@ $(document).ready(function(){
   <div class="row">
  
     
-    <div class="col-sm-8" >
+    <div class="col-sm-8" id="ifram">
      <div class="responsive-iframe-container big-container">
  
  <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;mode=WEEK&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=dentistproject682%40gmail.com&amp;color=%232c3e50&amp;ctz=America%2FNew_York" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>  
@@ -82,7 +82,7 @@ $(document).ready(function(){
  
   <div class="responsive-iframe-container small-container">
  
- <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;mode=WEEK&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=dentistproject682%40gmail.com&amp;color=%232c3e50&amp;ctz=America%2FNew_York" style="border-width:0" width="350" height="300" frameborder="0" scrolling="no"></iframe>  
+ <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;mode=WEEK&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=dentistproject682%40gmail.com&amp;color=%232c3e50&amp;ctz=America%2FNew_York" style="border-width:0" width="350" height="500" frameborder="0" scrolling="no"></iframe>  
  </div>
  
     
