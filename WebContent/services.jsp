@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<%@include file="header.html" %>
+<%@include file="dynamicheader.html" %>
 
 
 <div class="container">

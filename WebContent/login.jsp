@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="css/business-frontpage.css" media="screen">
 </head>
 <body>
-<%@include file="header.html" %>
+<%@include file="staticheader.html" %>
 
   <header class="business-header">
         <div class="container">
@@ -24,6 +24,10 @@
 <div class="container">
   <div class="row">
         <div class="col-sm-4 col-sm-offset-1">
+        <div class="alert alert-dismissible alert-danger">
+  
+  <strong>Oh snap!</strong> <a href="#" class="alert-link">Change a few things up</a>.
+</div>
             <h2>Login</h2>
 
 	    	

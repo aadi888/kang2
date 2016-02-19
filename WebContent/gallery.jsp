@@ -8,7 +8,7 @@
 
 </head>
 <body>
-<%@include file="header.html" %>
+<%@include file="dynamicheader.html" %>
 
  <!-- Page Content -->
     <div class="container">
