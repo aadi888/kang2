@@ -41,7 +41,7 @@
  <script>
 $(document).ready(function(){
 	 $("#table").show();
-	
+	 
      $("#form").hide();
      
     $("#legends").click(function(){
@@ -93,8 +93,8 @@ $(document).ready(function(){
     <br/>
    
 <div style="float: right;">
-<button id="legends"  class="btn btn-info">Legends</button>
- <button id="schedule"  class="btn btn-info" >Schedule Your Appointment !</button>
+<button id="legends"  class="btn btn-primary">Legends</button>
+ <button id="schedule"  class="btn btn-primary" data-toggle="modal" data-target="#myModal" >Schedule Your Appointment !</button>
 <br/>
 <br/>
 <br/>
@@ -114,8 +114,52 @@ $(document).ready(function(){
  <td>Available Slot(Book Your Appointment)</td>
  </tr>
  
- </table>
  
+ </table>
+ <br/>
+ <br/>
+ 
+ <div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">Working Hours</h3>
+  </div>
+  <div class="panel-body">
+  <table>
+  <tr>
+  <td><strong>Mon:</strong></td>
+  <td>Closed</td>
+  </tr>
+  <tr>
+  <td><strong>Tue:</strong></td>
+  <td>9:00am to 5:00pm</td>
+  </tr>
+  <tr>
+  <td><strong>Wed:</strong></td>
+  <td>Closed</td>
+  </tr>
+  <tr>
+  <td><strong>Thu:</strong></td>
+  <td>Closed</td>
+  </tr>
+  <tr>
+  <td><strong>Fri:</strong></td>
+  <td>9:00am to 5:00pm</td>
+  </tr>
+  <tr>
+  <td><strong>Sat:</strong></td>
+  <td>Closed</td>
+  </tr>
+  <tr>
+  <td><strong>Sun:</strong></td>
+  <td>Closed</td>
+  </tr>
+    		
+
+</table>
+  </div>
+</div>
+ 
+  
 </div>
 
    
@@ -209,6 +253,34 @@ $(document).ready(function(){
    
   </div>
 
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          
+          <h4 class="modal-title">Scheduling An Appointment !</h4>
+        </div>
+        <div class="modal-body">
+        <ul>
+          <li><p>The fastest and easiest way to schedule your appointment with the doctor is to contact our Newton Massachusetts office at (617) 244-8087.</p></li>
+
+<li><p>Another easy way is via internet. Please fill the form on your screen to request an appointment.</p></li>
+<br/>
+<br/>
+<p><i>We will promptly schedule you with a convenient time to see the doctor</i></p>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-dismiss="modal"><i class="fa fa-thumbs-o-up"></i> Got It</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
   </div>
 <br/>
 

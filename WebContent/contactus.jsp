@@ -96,6 +96,8 @@
 </form>
 </div>
 <div class="col-sm-6">
+
+<p><strong>If you're coming from another location and you are not familiar with the streets on the map below, please contact our office for directions at (617) 244-8087. Our office is located in the building right across the Union street from D-line (Green Line) Newton Centre T-Station.</strong></p><br/><br/>
  <div class="responsive-iframe-container big-container">
  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2949.6088459480216!2d-71.193321!3d42.32954099999999!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e382786f7ed0b1%3A0x6c6af8f44698047b!2sYoon+H.+Kang%2C+DMD+PhD+LLC!5e0!3m2!1sen!2sus!4v1398192235059" style="border:0" frameborder="0" height="400" width="500"></iframe>
  </div>

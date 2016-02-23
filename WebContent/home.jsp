@@ -76,7 +76,7 @@
 <br/>
 
 
-<div id="howitworks">
+<div id="howitworks" class="container">
 
 
 <!-- Thumbnail  -->
