@@ -14,8 +14,13 @@
      $("#Appointments").hide();
      $("#Treatments").hide();
      $("#Insurance").hide();
-     $("#Payment").hide();
+     $("#Payment").hide();     
  $("#MyProfile").show();
+ $("#showContactForm").show();
+ $("#showPersonalForm").show();
+ $("#hideContactForm").hide();
+ $("#hidePersonalForm").hide();
+ 
  }
  
  function showMessages()
@@ -54,6 +59,34 @@
      $("#Payment").hide();
  $("#MyProfile").hide();
  }
+ function showContactForm()
+ {
+	 
+	 $("#Messages").hide();
+     $("#Appointments").hide();
+     $("#Treatments").hide();
+     $("#Insurance").hide();
+     $("#Payment").hide();     
+ $("#MyProfile").show();
+ $("#hideContactForm").show();
+ $("#showContactForm").hide("slow");
+ $("#showPersonalForm").show();
+ $("#hidePersonalForm").hide();
+     
+ }
+ function showPersonalForm()
+ {
+	 $("#Messages").hide();
+     $("#Appointments").hide();
+     $("#Treatments").hide();
+     $("#Insurance").hide();
+     $("#Payment").hide();     
+ $("#MyProfile").show();
+ $("#hideContactForm").hide();
+ $("#showContactForm").show();
+ $("#showPersonalForm").hide("slow");
+ $("#hidePersonalForm").show();
+ }
  function showPayment()
  {
 	 $("#Messages").hide();
@@ -63,9 +96,12 @@
      $("#Payment").show();
  $("#MyProfile").hide();
  }
+ 
+
 $(document).ready(function(){
 	 
 	showProfile();
+	
   
   
     
@@ -130,42 +166,145 @@ $(document).ready(function(){
           	
   
           		<div id="MyProfile">
-          		
+          		<div id="showContactForm">
           		<form class="form-horizontal">
-  <fieldset>
+  
+   <div class="col-sm-12" style="background-color: #F0FFFF;margin-bottom: 20px;">
+				<h2><i class="fa fa-phone"></i> Contact Information </h2>
+  
+  
+    <div class="form-group">
+  <label class="control-label" for="disabledInput">Email</label>&nbsp;&nbsp;shahadish@yahoo.com
+  
+</div>
+ 
+ <div class="form-group">
+  <label class="control-label" for="disabledInput">Number</label>&nbsp;&nbsp;617 959 9657
+  
+</div>
+
+ <div class="form-group">
+  <label class="control-label" for="disabledInput">Emergency Number</label>&nbsp;&nbsp;617 959 XXXX
+  
+</div>
+
+<div class="form-group">
+ <a onclick="showContactForm()" href="javascript:void(0);"><i class="fa fa-plus-circle" style="font-size:30px;color: #2c3e50;"></i></a>
+ </div>    
    
-    
+  </div>
+  </form>
+</div>          		
+  		<div id="hideContactForm">
+          		<form class="form-horizontal">
+  
+   <div class="col-sm-12" style="background-color: #F0FFFF;margin-bottom: 20px;">
+				<h2><i class="fa fa-phone"></i> Contact Information </h2>
+  
+  
     <div class="form-group">
   <label class="control-label" for="disabledInput">Email</label>
-  <input class="form-control" id="disabledInput" type="text" placeholder="shahadish@yahoo.com" disabled="">
+  <input class="form-control" id="disabledInput" type="text" placeholder="shahadish@yahoo.com" >
 </div>
- <div class="form-group">
-  <label class="control-label" for="disabledInput">Name</label>
-  <input class="form-control" id="disabledInput" type="text" placeholder="Aadish Shah" disabled="">
-</div>
- <div class="form-group">
-  <label class="control-label" for="disabledInput">Password</label>
-  <input class="form-control" id="disabledInput" type="text" placeholder="992893" disabled="">
-</div>
+ 
  <div class="form-group">
   <label class="control-label" for="disabledInput">Number</label>
-  <input class="form-control" id="disabledInput" type="text" placeholder="98238993" disabled="">
+  <input class="form-control" id="disabledInput" type="text" placeholder="98238993">
+</div>
+
+<div class="form-group">
+<label class="control-label" for="disabledInput">Emergency Number</label>
+  <input class="form-control" id="disabledInput" type="text" placeholder="98238993">
+</div>
+
+ <div class="form-group">
+  <button type="submit" class="btn btn-primary">Update</button>
+ </div>    
+  </div>
+  </form>
+  </div>
+  
+  <div id="showPersonalForm">
+          		<form class="form-horizontal">
+  
+   <div class="col-sm-12" style="background-color: #F0FFFF;margin-bottom: 20px;">
+				<h2><i class="fa fa-info"></i>&nbsp; Personal Information </h2>
+  
+  
+    <div class="form-group">
+  <label class="control-label" for="disabledInput">First Name</label>&nbsp;&nbsp;Aadish
+  
 </div>
  <div class="form-group">
-  <label class="control-label" for="disabledInput">DOB</label>
-  <input class="form-control" id="disabledInput" type="text" placeholder="07/22/1992" disabled="">
+  <label class="control-label" for="disabledInput">Last Name</label>&nbsp;&nbsp;Shah
+  
+</div>
+ <div class="form-group">
+  <label class="control-label" for="disabledInput">DOB</label>&nbsp;&nbsp;07/22/1992
+  
+</div>
+<div class="form-group">
+  <label class="control-label" for="disabledInput">Address</label>&nbsp;&nbsp;935 Dorchester Avenue , Apt #2 , Dorchester MA 02125
+  
+</div>
+<div class="form-group">
+  <label class="control-label" for="disabledInput">Phone</label>&nbsp;&nbsp;988-002-XXXX
+  
 </div>
 
-
+<div class="form-group">
+ <a onclick="showPersonalForm()" href="javascript:void(0);"><i class="fa fa-plus-circle" style="font-size:30px;color: #2c3e50;"></i></a>
+ </div>    
+   
+  </div>
+  </form>
+</div>          		
+  		<div id="hidePersonalForm">
+          		<form class="form-horizontal">
+  
+  <div class="col-sm-12" style="background-color: #F0FFFF;margin-bottom: 20px;">
+				<h2><i class="fa fa-info"></i>&nbsp; Personal Information </h2>
+  
+  
     <div class="form-group">
-      
-        <button type="reset" class="btn btn-default">Cancel</button>
-        <button type="submit" class="btn btn-primary">Edit</button>
-      
-    </div>
-  </fieldset>
-</form>
+ <label class="control-label" for="disabledInput">First Name</label>
+  <input class="form-control" id="disabledInput" type="text" placeholder="Aadish" >
 </div>
+<div class="form-group">
+ <label class="control-label" for="disabledInput">Last Name</label>
+  <input class="form-control" id="disabledInput" type="text" placeholder="Shah" >
+</div>
+
+ <div class="form-group">
+  <label class="control-label" for="disabledInput">DOB</label>
+  <input class="form-control" id="disabledInput" type="number" placeholder="mm/dd/yyyy" >
+</div>
+ <div class="form-group">
+      <label for="textArea" >Address</label>
+      <div>
+        <textarea class="form-control" rows="3" id="textArea" >935 Dorchester Avenue , Apt #2 , Dorchester MA 02125</textarea>
+        <span class="help-block">Maximum 1000 characters</span>
+      </div>
+    </div>
+ <div class="form-group">
+  <label class="control-label" for="disabledInput">Phone</label>
+  <input class="form-control" id="disabledInput" type="text" placeholder="98238993">
+</div>
+
+ <div class="form-group">
+  <button type="submit" class="btn btn-primary">Update</button>
+ </div>    
+  </div>
+  </form>
+  </div>
+  
+  
+  </div>
+
+    
+    
+
+  
 
 
 				<div id="Messages">
