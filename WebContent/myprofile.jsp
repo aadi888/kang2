@@ -6,6 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 <script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
  <script>
  
  function showProfile()
@@ -102,11 +103,36 @@ $(document).ready(function(){
 	 
 	showProfile();
 	
-  
+	
+    
+});
+
+$(document).ready(function(){
+	
+	$.get("ContactInfoController", function(data, status){
+        alert("Data: " + data + "\nStatus: " + status);
+    });
+	
+	$("#updateContact").click(function(){
+		document.getElementById('spinner').style.visibility = 'visible';
+	    $.post("ContactInfoController",
+	    {number:$('#number').val(),
+	    	email:$('#email').val(),
+	    	enumber:$('#enumber').val()},
+	    	function(data,status){
+	    		  
+	    		 document.getElementById('spinner').style.visibility = 'hidden';
+	    			  }
+	    		
+	       
+	    );
+	});
   
     
 });
+
 </script>
+
 </head>
 <body>
 
@@ -196,32 +222,36 @@ $(document).ready(function(){
   </form>
 </div>          		
   		<div id="hideContactForm">
-          		<form class="form-horizontal">
+          		
   
    <div class="col-sm-12" style="background-color: #F0FFFF;margin-bottom: 20px;">
+   <form class="form-horizontal" id="contactForm">
 				<h2><i class="fa fa-phone"></i> Contact Information </h2>
   
   
     <div class="form-group">
   <label class="control-label" for="disabledInput">Email</label>
-  <input class="form-control" id="disabledInput" type="text" placeholder="shahadish@yahoo.com" >
+  <input class="form-control" id="email" type="text" placeholder="shahadish@yahoo.com" >
 </div>
  
  <div class="form-group">
   <label class="control-label" for="disabledInput">Number</label>
-  <input class="form-control" id="disabledInput" type="text" placeholder="98238993">
+  <input class="form-control" id="number" type="text" placeholder="98238993">
 </div>
 
 <div class="form-group">
 <label class="control-label" for="disabledInput">Emergency Number</label>
-  <input class="form-control" id="disabledInput" type="text" placeholder="98238993">
+  <input class="form-control" id="enumber" type="text" placeholder="98238993">
 </div>
 
+ </form>     
  <div class="form-group">
-  <button type="submit" class="btn btn-primary">Update</button>
- </div>    
+  <button class="btn btn-primary" id="updateContact" style="display: inline-block;" >Update</button>&nbsp;&nbsp;<i class="fa fa-spinner fa-pulse" style="font-size: 30px;visibility: hidden;" id="spinner"></i>
+ </div>
   </div>
-  </form>
+ 
+  
+  
   </div>
   
   <div id="showPersonalForm">
