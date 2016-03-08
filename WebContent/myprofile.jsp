@@ -505,30 +505,105 @@
           		<div id="Insurance">
           		
      
-     		<div class="col-sm-6">
+<div class="col-sm-12" style="background-color: #F0FFFF;margin-bottom: 20px;">
+				
+<div class="list-group" ">
+  
+   <h2> <i class="fa fa-medkit"></i> My Insurances <a href="" style="float: right;" data-toggle="modal" data-target="#insuranceModal" ><i class="fa fa-pencil-square-o"  >Add New</i></a></h2><br/> 
+  <div class="col-sm-6">
+  <ul class="list-group">
+    <li class="list-group-item">
+     
+   
+    <p class="list-group-item-text">
+   
+    
+    
+    <div class="form-group">
+  <label class="control-label" for="disabledInput">Date Of Birth</label>&nbsp;&nbsp;10/12/1992
+  
+</div>
+<div class="form-group">
+  <label class="control-label" for="disabledInput">Insurance Provider ID </label>&nbsp;&nbsp;12313213123
+  
+</div>
+<div class="form-group">
+  <label class="control-label" for="disabledInput">Insurance Provider Name</label>&nbsp;&nbsp;Aetna
+  
+</div>
+<div class="form-group">
+  <label class="control-label" for="disabledInput">Subscriber ID</label>&nbsp;&nbsp;10121992
+  
+</div>
+<div class="form-group">
+  <label class="control-label" for="disabledInput">Subscriber Name</label>&nbsp;&nbsp;Aadish Shah
+  
+</div>
+<div class="form-group">
+  <label class="control-label" for="disabledInput">Patient Name</label>&nbsp;&nbsp;xyz
+  
+</div>
+<div class="form-group">
+  <label class="control-label" for="disabledInput">Status</label>&nbsp;&nbsp;active
+  
 
-<div class="panel panel-success">
-  <div class="panel-heading">
-    <h3 class="panel-title"><i class="fa fa-info"></i> Insurance 1 <small>12/12/2014</small></h3>
+</div>
+
+ 
+        <button type="submit" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#insuranceModal">Edit</button>
+        <button type="reset" class="btn btn-default btn-sm">Delete</button>
+     
+    </li> 
+  </ul>
   </div>
-  <div class="panel-body">
-   Insurance name and info
+  <div class="col-sm-6">
+  <ul class="list-group">
+    <li class="list-group-item">
+     
+   
+    <p class="list-group-item-text">
+   
+    
+    
+    <div class="form-group">
+  <label class="control-label" for="disabledInput">Date Of Birth</label>&nbsp;&nbsp;10/12/1992
+  
+</div>
+<div class="form-group">
+  <label class="control-label" for="disabledInput">Insurance Provider ID </label>&nbsp;&nbsp;12313213123
+  
+</div>
+<div class="form-group">
+  <label class="control-label" for="disabledInput">Insurance Provider Name</label>&nbsp;&nbsp;Aetna
+  
+</div>
+<div class="form-group">
+  <label class="control-label" for="disabledInput">Subscriber ID</label>&nbsp;&nbsp;10121992
+  
+</div>
+<div class="form-group">
+  <label class="control-label" for="disabledInput">Subscriber Name</label>&nbsp;&nbsp;Aadish Shah
+  
+</div>
+<div class="form-group">
+  <label class="control-label" for="disabledInput">Patient Name</label>&nbsp;&nbsp;xyz
+  
+</div>
+<div class="form-group">
+  <label class="control-label" for="disabledInput">Status</label>&nbsp;&nbsp;active
+  
+
+</div>
+
+ 
+        <button type="submit" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#insuranceModal">Edit</button>
+        <button type="reset" class="btn btn-default btn-sm">Delete</button>
+     
+    </li> 
+  </ul>
   </div>
 </div>
 </div>
-
-<div class="col-sm-6">
-
-<div class="panel panel-success">
-  <div class="panel-heading">
-    <h3 class="panel-title"><i class="fa fa-info"></i> Insurance 2<small>12/12/2014</small></h3>
-  </div>
-  <div class="panel-body">
-   Insurance name and info
-  </div>
-</div>
-</div>
-
           		</div>
           		
           		<div id="Payment">
@@ -594,6 +669,65 @@
       
     </div>
   </div>
+  
+      <!-- Modal new insurance -->
+  <div class="modal fade" id="insuranceModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Add New Insurance</h4>
+        </div>
+        <div class="modal-body">
+        <div class="form-group">
+  <label class="control-label" for="disabledInput">DOB</label>
+  <input class="form-control" id="disabledInput" type="number" placeholder="mm/dd/yyyy" >
+</div>
+        <div class="form-group">
+ <label class="control-label" for="disabledInput">Insurance Provider ID</label>
+  <input class="form-control" id="disabledInput" type="number" placeholder="912902100 1 3" >
+</div>
+<div class="form-group">
+ <label class="control-label" for="disabledInput">Insurance Provider Name</label>
+  <input class="form-control" id="disabledInput" type="text" placeholder="Aetna" >
+</div>
+<div class="form-group">
+ <label class="control-label" for="disabledInput">Subscriber Full Name</label>
+  <input class="form-control" id="disabledInput" type="text" placeholder="Aadish Shah" >
+</div>
+<div class="form-group">
+ <label class="control-label" for="disabledInput">Subscriber ID</label>
+  <input class="form-control" id="disabledInput" type="text" placeholder="920329309209309" >
+</div>
+<div class="form-group">
+ <label class="control-label" for="disabledInput">Patient Name</label>
+  <input class="form-control" id="disabledInput" type="text" placeholder="xyz" >
+</div>
+<div class="form-group">
+      <label for="select">status</label>
+      <div>
+        <select class="form-control" id="select">
+          <option selected="selected">Active</option>
+          <option>Expired</option>
+        
+        </select>
+        
+      </div>
+    </div>  
+      
+
+    
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" >Add</button>
+        </div>
+      </div>
+      
+    </div>
+      </div>
   
         </div>
 <%@include file="footer.html" %>
