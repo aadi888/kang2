@@ -36,14 +36,14 @@
 </div>
 <div id="filters">
 <div class="row">
-<div class="col-lg-3 col-md-3 col-sm-4">
+<div class="col-sm-3">
 <form class="navbar-form navbar-left" role="search">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search">
         </div>
        </form>
       </div>
-      <div class="col-sm-8">
+      <div class="col-sm-9">
           	<ul style="float: right;" >
           	<br/>
           	<li class="dropdown">
@@ -62,7 +62,7 @@
 </div>
 <div class="row">
 
-          <div class="col-lg-3 col-md-3 col-sm-4">
+          <div class="col-sm-3">
             <div class="list-group table-of-contents">
               <a class="list-group-item" onclick="showProfile()" href="javascript:void(0);">My Profile</a>
               <a class="list-group-item" onclick="showMessages()" href="javascript:void(0);">Messages</a>
@@ -75,7 +75,7 @@
           
           <!-- All Forms Needed In Patient Profile start -->
           
-          	<div class="col-sm-8">
+          	<div class="col-sm-9">
           	
           	
   
@@ -349,30 +349,127 @@
           		
           		
           		<div id="Appointments">
-          		<div class="col-sm-6">
+          		<div class="col-sm-12" style="background-color: #F0FFFF;margin-bottom: 20px;">
+				
+<div class="list-group">
+  
+   <h2> <i class="fa fa-check"></i> Confirmed </h2><br/> 
+  
+  <table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Appointment Start Time</th>
+      <th>Note</th>
+      <th>Expected Amount</th>
+      <th>Amount Paid</th>
+      <th>Status</th>
+      <th></th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>3 pm 10/12/2017</td>
+      <td>root canal therapy root canal therapyroot canal therapyroot canal therapy root canal therapy root canal therapyroot canal therapyroot canal therapyroot canal therapy root canal therapyroot canal therapyroot canal therapy</td>
+      <td>$200 </td>
+      <td>$0 </td>
+      <td>
+  <a  class="btn btn-success btn-sm" >Confirmed</a>
+  
+         </td>
+         <td><a href="#"><i class="fa fa-times" style="font-size: 30px;color: red;"></i></a></td>
+    </tr>
+   </tbody>
+   
+   <tbody>
+    <tr>
+      <td>2</td>
+      <td>3 pm</td>
+      <td>root canal therapy root canal therapyroot canal therapyroot canal therapy root canal therapy root canal therapyroot canal therapyroot canal therapyroot canal therapy root canal therapyroot canal therapyroot canal therapy</td>
+      <td>$200 </td>
+      <td>$0 </td>
+      <td>
+  <a  class="btn btn-success btn-sm" >Confirmed</a>
+  
+         </td>
+         <td><a href="#"><i class="fa fa-times" style="font-size: 30px;color: red;"></i></a></td>
+    </tr>
+   </tbody>
+   
+   <tbody>
+    <tr>
+      <td>3</td>
+      <td>3 pm</td>
+      <td>root canal therapy root canal therapyroot canal therapyroot canal therapy root canal therapy root canal therapyroot canal therapyroot canal therapyroot canal therapy root canal therapyroot canal therapyroot canal therapy</td>
+      <td>$200 </td>
+      <td>$0 </td>
+      <td>
+  <a  class="btn btn-success btn-sm" >Confirmed</a>
+  
+         </td>
+         <td><a href="#"><i class="fa fa-times" style="font-size: 30px;color: red;"></i></a></td>
+    </tr>
+   </tbody>
+  </table>
+  
+  
+  
+  
+  
+</div>
+</div>
+<div class="col-sm-12" style="background-color: #F0FFFF;margin-bottom: 20px;">
+<div class="list-group" >
+  
+   <h2> <i class="fa fa-exclamation-triangle"></i> Requested Appointments <a href="events.jsp" style="float: right;"><i class="fa fa-pencil-square-o"  >Schedule New</i></a></h2><br/> 
+  
+  <table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Appointment Start Time</th>
+      <th>Status</th>
+      <th></th>
+      
+    </tr>
+  </thead>
+  
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>3 pm 10/12/2019</td>
+      <td>
+  <a  class="btn btn-warning btn-sm" >Pending</a>
+  
+         </td>
+         <td><a href="#"><i class="fa fa-check" style="font-size: 30px;color: green;"></i></a></td>
+      
+     
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>3 pm 10/12/2019</td>
+      <td>
+  <a  class="btn btn-danger btn-sm" >Canceled</a>
+  
+         </td>
+         <td></td>
+      
+     
+    </tr>
+   </tbody>
+  </table>  
+ 
+  
+  
+  
+  
+</div>
 
-<div class="panel panel-success">
-  <div class="panel-heading">
-    <h3 class="panel-title"><i class="fa fa-calendar"></i> Appointment 1 <small>12/12/2014</small></h3>
-  </div>
-  <div class="panel-body">
-    Treatment name and info 
-  </div>
 </div>
 </div>
-<div class="col-sm-6">
-
-<div class="panel panel-success">
-  <div class="panel-heading">
-    <h3 class="panel-title"><i class="fa fa-calendar"></i> Appointment 2 <small>12/12/2014</small></h3>
-  </div>
-  <div class="panel-body">
-   Treatment name and info
-  </div>
-</div>
-</div>
-
-          		</div>
           		
           		
           		<div id="Treatments">
