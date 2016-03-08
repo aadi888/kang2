@@ -9,9 +9,20 @@
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/myprofilefunctions.js"></script>
  <script type="text/javascript" src="js/myprofileready.js"></script>
+  
+
+         <style>
+        .hide {
+		  display: none;
+}
+        </style>
 
 </head>
 <body>
+
+
+
+
 
 <%@include file="dynamicheader.html" %>
 <div class="container">
@@ -297,25 +308,41 @@
 
 
 				<div id="Messages">
-				<div class="col-sm-12">
-				<div class="panel panel-primary">
-  <div class="panel-heading">
-    <h3 class="panel-title"><i class="fa fa-envelope"></i> Dr. Kang  <small>10/12/2014</small></h3>
-  </div>
-  <div class="panel-body">
-    Hey , How was our Treatment?
-  </div>
+				<div class="col-sm-12" style="background-color: #F0FFFF;margin-bottom: 20px;">
+				
+<div class="list-group" ">
+  
+   <h2> <i class="fa fa-share"></i> Sent Messages <a href="" style="float: right;" data-toggle="modal" data-target="#messageModal" ><i class="fa fa-pencil-square-o"  >Compose</i></a></h2><br/> 
+  
+   <ul class="list-group">
+    <li class="list-group-item"><p class="list-group-item-text">show here 2 lines of message by default ..... <a class="read-more-show hide" href="#">Read More</a> <span class="read-more-content">Egestas mollitia quos metus natus assumenda ullam suscipit ultricies. Voluptas, nihil natoque elementum error ligula exercitationem aliquid tempor mauris penatibus. Suspendisse! Rutrum volutpat adipiscing nascetur cras conubia cupidatat! <a class="read-more-hide hide" href="#">Read Less</a></span></p><p><small style="float: right;">12/12/2014</small></p></li>
+    <li class="list-group-item"><p class="list-group-item-text">show here 2 lines of message by default ..... <a class="read-more-show hide" href="#">Read More</a> <span class="read-more-content">Egestas mollitia quos metus natus assumenda ullam suscipit ultricies. Voluptas, nihil natoque elementum error ligula exercitationem aliquid tempor mauris penatibus. Suspendisse! Rutrum volutpat adipiscing nascetur cras conubia cupidatat! <a class="read-more-hide hide" href="#">Read Less</a></span></p><p><small style="float: right;">12/12/2014</small></p></li>
+    <li class="list-group-item"><p class="list-group-item-text">show here 2 lines of message by default ..... <a class="read-more-show hide" href="#">Read More</a> <span class="read-more-content">Egestas mollitia quos metus natus assumenda ullam suscipit ultricies. Voluptas, nihil natoque elementum error ligula exercitationem aliquid tempor mauris penatibus. Suspendisse! Rutrum volutpat adipiscing nascetur cras conubia cupidatat! <a class="read-more-hide hide" href="#">Read Less</a></span></p><p><small style="float: right;">12/12/2014</small></p></li>
+  </ul>
+  <script src="js/readmore.js"></script>
+  
+  
+  
+  
 </div>
-</div>
-<div class="col-sm-6">
 
-<div class="panel panel-success">
-  <div class="panel-heading">
-    <h3 class="panel-title"><i class="fa fa-envelope"></i> Patient jun <small>12/12/2014</small></h3>
-  </div>
-  <div class="panel-body">
-    It was Awesome . Thanks for your time.
-  </div>
+</div>
+
+
+
+<div class="col-sm-12" style="background-color: #F0FFFF;margin-bottom: 20px;">
+				
+<div class="list-group">
+  
+   <h2><i class="fa fa-reply"></i> Received Messages</h2><br/>
+  
+  <ul class="list-group">
+    <li class="list-group-item"><p class="list-group-item-text">show here 2 lines of message by default ..... <a class="read-more-show hide" href="#">Read More</a> <span class="read-more-content">Egestas mollitia quos metus natus assumenda ullam suscipit ultricies. Voluptas, nihil natoque elementum error ligula exercitationem aliquid tempor mauris penatibus. Suspendisse! Rutrum volutpat adipiscing nascetur cras conubia cupidatat! <a class="read-more-hide hide" href="#">Read Less</a></span></p><p><small style="float: right;">12/12/2014</small></p></li>
+    <li class="list-group-item"><p class="list-group-item-text">show here 2 lines of message by default ..... <a class="read-more-show hide" href="#">Read More</a> <span class="read-more-content">Egestas mollitia quos metus natus assumenda ullam suscipit ultricies. Voluptas, nihil natoque elementum error ligula exercitationem aliquid tempor mauris penatibus. Suspendisse! Rutrum volutpat adipiscing nascetur cras conubia cupidatat! <a class="read-more-hide hide" href="#">Read Less</a></span></p><p><small style="float: right;">12/12/2014</small></p></li>
+    <li class="list-group-item"><p class="list-group-item-text">show here 2 lines of message by default ..... <a class="read-more-show hide" href="#">Read More</a> <span class="read-more-content">Egestas mollitia quos metus natus assumenda ullam suscipit ultricies. Voluptas, nihil natoque elementum error ligula exercitationem aliquid tempor mauris penatibus. Suspendisse! Rutrum volutpat adipiscing nascetur cras conubia cupidatat! <a class="read-more-hide hide" href="#">Read Less</a></span></p><p><small style="float: right;">12/12/2014</small></p></li>
+  </ul>
+  <script src="js/readmore.js"></script> 
+
 </div>
 </div>
           		</div>
@@ -443,6 +470,34 @@
           
           
         </div>
+        
+        <!-- Modal new message -->
+  <div class="modal fade" id="messageModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Send New Message</h4>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+      
+      <div>
+        <textarea class="form-control" rows="3" id="textArea" placeholder="type your message here.." maxlength="255"></textarea>
+        <span class="help-block">Maximum 255 characters.</span>
+      </div>
+    </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" >Send</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
         </div>
 <%@include file="footer.html" %>
 
