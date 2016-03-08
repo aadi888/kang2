@@ -36,8 +36,8 @@ public class ContactInfoController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		
-		 
-		System.out.println(request.getParameter("number"));
+		 System.out.println("HERE");
+		System.out.println(request.getParameter("data"));
 		System.out.println(request.getParameter("email"));
 		System.out.println(request.getParameter("enumber"));
 		
