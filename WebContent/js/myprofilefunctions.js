@@ -13,9 +13,13 @@
  $("#showContactForm").show();
  $("#showPersonalForm").show();
  $("#showEmergencyForm").show();
+ 
+ $("#showAddressForm").show();
  $("#hideContactForm").hide();
  $("#hidePersonalForm").hide();
  $("#hideEmergencyForm").hide();
+ 
+ $("#hideAddressForm").hide();
  
  
  }
@@ -71,6 +75,9 @@
  $("#hidePersonalForm").hide();
  $("#showEmergencyForm").show();
  $("#hideEmergencyForm").hide();
+ 
+ $("#showAddressForm").show();
+ $("#hideAddressForm").hide();
      
  }
  function showPersonalForm()
@@ -87,6 +94,10 @@
  $("#hidePersonalForm").show();
  $("#showEmergencyForm").show();
  $("#hideEmergencyForm").hide();
+ 
+ 
+ $("#showAddressForm").show();
+ $("#hideAddressForm").hide();
  }
  
  function showEmergencyForm()
@@ -103,6 +114,30 @@
  $("#hideEmergencyForm").show();
  $("#showPersonalForm").show();
  $("#hidePersonalForm").hide();
+ 
+ 
+ $("#showAddressForm").show();
+ $("#hideAddressForm").hide();
+ }
+ 
+ function showAddressForm()
+ {
+	 $("#Messages").hide();
+     $("#Appointments").hide();
+     $("#Treatments").hide();
+     $("#Insurance").hide();
+     $("#Payment").hide();     
+ $("#MyProfile").show();
+ $("#hideContactForm").hide();
+ $("#showContactForm").show();
+ $("#showEmergencyForm").show();
+ $("#hideEmergencyForm").hide();
+ $("#showPersonalForm").show();
+ $("#hidePersonalForm").hide();
+ 
+ 
+ $("#showAddressForm").hide("slow");
+ $("#hideAddressForm").show();
  }
  function showPayment()
  {
