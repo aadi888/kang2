@@ -19,6 +19,7 @@
     
     
     <link rel="stylesheet" href="css/custom.min.css">
+    <link rel="stylesheet" href="css/datepicker.css">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="../bower_components/html5shiv/dist/html5shiv.js"></script>
@@ -167,7 +168,7 @@
  <h2><span class="glyphicon glyphicon-user"></span>Login</h2>
   <div class="form-group">
 			    <label for="email">Username</label>
-			    <input type="text" class="form-control" id="email" name="email" placeholder="Enter username" value="">
+			    <input type="text" class="form-control" id="email" name="email" placeholder="Enter username" value="" >
 			  </div>
 			  <div class="form-group">
 			    <label for="password">Password</label>
@@ -181,27 +182,66 @@
  
    <h2><span class="glyphicon glyphicon-log-in"></span>  Register</h2>
 			<form action="/register" method="post">
+			<div class="col-sm-4">
 			  <div class="form-group">
 			    <label for="first-name">First Name</label>
 			    <input type="text" class="form-control" name="firstName">
 			  </div>
+			  </div>
+			  <div class="col-sm-4">
+			  <div class="form-group">
+			    <label for="last-name">Middle Name</label>
+			    <input type="text" class="form-control" name="middleName">
+			  </div>
+			  </div>
+			  <div class="col-sm-4">
 			  <div class="form-group">
 			    <label for="last-name">Last Name</label>
 			    <input type="text" class="form-control" name="lastName">
 			  </div>
-			  <div class="form-group">
-			    <label for="major">Phone Number</label>
-			    <input type="text" class="form-control" name="major">
 			  </div>
+			  <div class="col-sm-12">
 			  <div class="form-group">
 			    <label for="email">Email</label>
 			    <input type="email" class="form-control" name="email">
 			  </div>
+			  </div>
+			  <div class="col-sm-6">
 			  <div class="form-group">
 			    <label for="password">Password</label>
 			    <input type="password" class="form-control" name="password">
 			  </div>
+			  </div>
+			  <div class="col-sm-6">
+			  <div class="form-group">
+			    <label for="password">Re-enter Password</label>
+			    <input type="password" class="form-control" name="repassword">
+			  </div>
+			  </div>
+			  <div class="col-sm-6">
+			  <div class="form-group">
+			    <label for="major">Phone Number</label>
+			    <input type="text" class="form-control" name="major" placeholder="xxx-xxx-xxxx">
+			  </div>
+			  </div>
+			  <div class="col-sm-6">
+			  
+			    <div class="form-group">
+      <label for="dob">Date Of Birth</label>
+      
+        <input type="text" class="form-control" id="datepick" placeholder="mm/dd/yyyy">
+        
+     
+    </div>
+			  </div>
+			   <div class="col-sm-12">
+			    <div class="checkbox">
+          <label>
+            <input type="checkbox"> I Agree 
+          </label>
+        </div>
 			  <button type="submit" class="btn btn-primary">Register</button>
+			  </div>
 			</form>
  
  </div>
@@ -226,6 +266,12 @@
 </div>
 
 <%@include file="footer.html" %>
+<script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
+<script type="text/javascript">
+	$('#datepick').datepicker({
+        format: "mm/dd/yyyy"
+    });
+	</script>
 
 
 

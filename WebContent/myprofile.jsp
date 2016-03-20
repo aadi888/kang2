@@ -107,7 +107,7 @@
 
 
 <div class="form-group">
- <a onclick="showPersonalForm()" href="javascript:void(0);"><i class="fa fa-pencil-square" style="font-size:30px;color: #2c3e50;"></i></a>
+ <a onclick="showPersonalForm()" href="javascript:void(0);"><i class="fa fa-plus-circle" style="font-size:30px;color: #2c3e50;"></i></a>
  </div>    
    
   </div>
@@ -173,7 +173,7 @@
 
 
 <div class="form-group">
- <a onclick="showAddressForm()" href="javascript:void(0);"><i class="fa fa-pencil-square" style="font-size:30px;color: #2c3e50;"></i></a>
+ <a onclick="showAddressForm()" href="javascript:void(0);"><i class="fa fa-plus-circle" style="font-size:30px;color: #2c3e50;"></i></a>
  </div>    
    
   </div>
@@ -237,7 +237,7 @@
 
 
 <div class="form-group">
- <a onclick="showContactForm()" href="javascript:void(0);"><i class="fa fa-pencil-square" style="font-size:30px;color: #2c3e50;"></i></a>
+ <a onclick="showContactForm()" href="javascript:void(0);"><i class="fa fa-plus-circle" style="font-size:30px;color: #2c3e50;"></i></a>
  </div>    
    
   </div>
@@ -289,7 +289,7 @@
   </div>
  
 <div class="form-group">
- <a onclick="showEmergencyForm()" href="javascript:void(0);"><i class="fa fa-pencil-square" style="font-size:30px;color: #2c3e50;"></i></a>
+ <a onclick="showEmergencyForm()" href="javascript:void(0);"><i class="fa fa-plus-circle" style="font-size:30px;color: #2c3e50;"></i></a>
  </div>    
    
   </div>
@@ -347,7 +347,7 @@
 				
 <div class="list-group" ">
   
-   <h2> <i class="fa fa-share"></i> Sent Messages <a href="" style="float: right;" data-toggle="modal" data-target="#messageModal" ><i class="fa fa-pencil-square"  >Compose</i></a></h2><br/> 
+   <h2> <i class="fa fa-share"></i> Sent Messages <a href="" style="float: right;" data-toggle="modal" data-target="#messageModal" ><i class="fa fa-plus-circle"  >Compose</i></a></h2><br/> 
   
    <ul class="list-group">
     <li class="list-group-item"><p class="list-group-item-text">show here 2 lines of message by default ..... <a class="read-more-show hide" href="#">Read More</a> <span class="read-more-content">Egestas mollitia quos metus natus assumenda ullam suscipit ultricies. Voluptas, nihil natoque elementum error ligula exercitationem aliquid tempor mauris penatibus. Suspendisse! Rutrum volutpat adipiscing nascetur cras conubia cupidatat! <a class="read-more-hide hide" href="#">Read Less</a></span></p><p><small style="float: right;">12/12/2014</small></p></li>
@@ -458,7 +458,7 @@
 <div class="col-sm-12" style="background-color: #F0FFFF;margin-bottom: 20px;">
 <div class="list-group" >
   
-   <h2> <i class="fa fa-exclamation-triangle"></i> Requested Appointments <a href="events.jsp" style="float: right;"><i class="fa fa-pencil-square"  >Schedule New</i></a></h2><br/> 
+   <h2> <i class="fa fa-exclamation-triangle"></i> Requested Appointments <a href="events.jsp" style="float: right;"><i class="fa fa-plus-circle"  >Schedule New</i></a></h2><br/> 
   
   <table class="table">
   <thead>
@@ -547,7 +547,7 @@
 				
 <div class="list-group" ">
   
-   <h2> <i class="fa fa-medkit"></i> My Insurances <a href="" style="float: right;" data-toggle="modal" data-target="#insuranceModal" ><i class="fa fa-pencil-square"  >Add New</i></a></h2><br/> 
+   <h2> <i class="fa fa-medkit"></i> My Insurances <a href="" style="float: right;" data-toggle="modal" data-target="#insuranceModal" ><i class="fa fa-plus-circle"  >Add New</i></a></h2><br/> 
   <div class="col-sm-6">
   <ul class="list-group">
     <li class="list-group-item">
