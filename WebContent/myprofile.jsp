@@ -511,26 +511,83 @@
           		
           		
           		<div id="Treatments">
-          		<div class="col-sm-6">
-
-<div class="panel panel-success">
-  <div class="panel-heading">
-    <h3 class="panel-title"><i class="fa fa-gavel"></i> Treatment 1 <small>12/12/2014</small></h3>
-  </div>
-  <div class="panel-body">
-   Treatment name and info
-  </div>
+             
+<div class="col-sm-12" style="background-color: #F0FFFF;margin-bottom: 20px;">
+				
+<div class="list-group" ">
+  
+   <h2> <i class="fa fa-gavel"></i> My Treatments </h2><br/> 
+  <div class="col-sm-6">
+  <ul class="list-group">
+    <li class="list-group-item">
+     
+   
+    <p class="list-group-item-text">
+   <form action="teeth.jsp?treatmentId=0">
+    <div class="form-group">
+  <label class="control-label" for="disabledInput">Patient Name</label>&nbsp;&nbsp;xyz
+  
 </div>
+    
+    <div class="form-group">
+  <label class="control-label" for="disabledInput">Treatment Date</label>&nbsp;&nbsp;10/12/1992
+  
+</div>
+<div class="form-group">
+  <label class="control-label" for="disabledInput">Treatment Expected Time </label>&nbsp;&nbsp;2 Hours
+  
 </div>
 
-<div class="col-sm-6">
+<div class="form-group">
+  <label class="control-label" for="disabledInput">Treatment note</label>&nbsp;&nbsp;Root canal therapy
+  
+</div>
+<div class="form-group">
+  <label class="control-label" for="disabledInput">Treatment Status</label>&nbsp;&nbsp;Completed
+  
+</div>
 
-<div class="panel panel-success">
-  <div class="panel-heading">
-    <h3 class="panel-title"><i class="fa fa-gavel"></i> Treatment 2<small>12/12/2014</small></h3>
+<button type="submit" class="btn btn-primary btn-sm" >Show Me My Treatment</button>
+       
+     </form>
+    </li> 
+  </ul>
   </div>
-  <div class="panel-body">
-   Treatment name and info
+   <div class="col-sm-6">
+  <ul class="list-group">
+    <li class="list-group-item">
+     
+   
+    <p class="list-group-item-text">
+   <form action="teeth.jsp?treatmentId=0">
+    <div class="form-group">
+  <label class="control-label" for="disabledInput">Patient Name</label>&nbsp;&nbsp;xyz
+  
+</div>
+    
+    <div class="form-group">
+  <label class="control-label" for="disabledInput">Treatment Date</label>&nbsp;&nbsp;10/12/1992
+  
+</div>
+<div class="form-group">
+  <label class="control-label" for="disabledInput">Treatment Expected Time </label>&nbsp;&nbsp;2 Hours
+  
+</div>
+
+<div class="form-group">
+  <label class="control-label" for="disabledInput">Treatment note</label>&nbsp;&nbsp;Root canal therapy
+  
+</div>
+<div class="form-group">
+  <label class="control-label" for="disabledInput">Treatment Status</label>&nbsp;&nbsp;Completed
+  
+</div>
+
+<button type="submit" class="btn btn-primary btn-sm" >Show Me My Treatment</button>
+       
+     </form>
+    </li> 
+  </ul>
   </div>
 </div>
 </div>
