@@ -646,29 +646,87 @@
           		
           		<div id="Payment">
           		
-          		<div class="col-sm-6">
+          		<div class="col-sm-12" style="background-color: #F0FFFF;margin-bottom: 20px;">
+				
+<div class="list-group" ">
+  
+   <h2> <i class="fa fa-money"></i> My Payments </h2><br/> 
+  <div class="col-sm-6">
+  <ul class="list-group">
+    <li class="list-group-item">
+     
+   
+    <p class="list-group-item-text">
+   
+    
+    
+    <div class="form-group">
+  <label class="control-label" for="disabledInput">Appointment Time </label>&nbsp;&nbsp;10/12/1992 <small>10:55 pm</small>
+  
+</div>
+<div class="form-group">
+  <label class="control-label" for="disabledInput">Patient Name </label>&nbsp;&nbsp;Aadish
+  
+</div>
+<div class="form-group">
+  <label class="control-label" for="disabledInput">Treatement name</label>&nbsp;&nbsp;note
+  
+</div>
+<div class="form-group">
+  <label class="control-label" for="disabledInput">Expected Amount</label>&nbsp;&nbsp;200
+  
+</div>
+<div class="form-group">
+  <label class="control-label" for="disabledInput">Amount Paid</label>&nbsp;&nbsp;100
+  
+</div>
 
-<div class="panel panel-success">
-  <div class="panel-heading">
-    <h3 class="panel-title"><i class="fa fa-credit-card"></i> Payment 1 <small>12/12/2014</small></h3>
+ 
+        
+     
+    </li> 
+  </ul>
   </div>
-  <div class="panel-body">
-   Payment name and info
-  </div>
+   <div class="col-sm-6">
+  <ul class="list-group">
+    <li class="list-group-item">
+     
+   
+    <p class="list-group-item-text">
+   
+    
+    
+    <div class="form-group">
+  <label class="control-label" for="disabledInput">Appointment Time </label>&nbsp;&nbsp;10/12/1992 <small>10:55 pm</small>
+  
 </div>
+<div class="form-group">
+  <label class="control-label" for="disabledInput">Patient Name </label>&nbsp;&nbsp;Aadish
+  
+</div>
+<div class="form-group">
+  <label class="control-label" for="disabledInput">Treatement name</label>&nbsp;&nbsp;note
+  
+</div>
+<div class="form-group">
+  <label class="control-label" for="disabledInput">Expected Amount</label>&nbsp;&nbsp;200
+  
+</div>
+<div class="form-group">
+  <label class="control-label" for="disabledInput">Amount Paid</label>&nbsp;&nbsp;100
+  
 </div>
 
-<div class="col-sm-6">
-
-<div class="panel panel-success">
-  <div class="panel-heading">
-    <h3 class="panel-title"><i class="fa fa-credit-card"></i> Payment 2<small>12/12/2014</small></h3>
-  </div>
-  <div class="panel-body">
-   Payment name and info
+ 
+        
+     
+    </li> 
+  </ul>
   </div>
 </div>
 </div>
+          		
+          		
 
           		</div>
 
