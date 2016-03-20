@@ -411,10 +411,10 @@
       <td>$200 </td>
       <td>$0 </td>
       <td>
-  <a  class="btn btn-success btn-sm" >Confirmed</a>
+  <a  class="btn btn-info btn-sm" >Completed</a>
   
          </td>
-         <td><a href="#"><i class="fa fa-times" style="font-size: 30px;color: red;"></i></a></td>
+         <td></td>
     </tr>
    </tbody>
    
@@ -465,8 +465,9 @@
     <tr>
       <th>#</th>
       <th>Appointment Start Time</th>
+      <th>Note</th>
       <th>Status</th>
-      <th></th>
+      
       
     </tr>
   </thead>
@@ -475,22 +476,24 @@
     <tr>
       <td>1</td>
       <td>3 pm 10/12/2019</td>
+      <td>root canal therapy root canal therapyroot canal therapyroot canal therapy root canal therapy root canal therapyroot canal therapyroot canal therapyroot canal therapy root canal therapyroot canal therapyroot canal therapy</td>
       <td>
   <a  class="btn btn-warning btn-sm" >Pending</a>
   
          </td>
-         <td><a href="#"><i class="fa fa-check" style="font-size: 30px;color: green;"></i></a></td>
+         
       
      
     </tr>
     <tr>
       <td>2</td>
       <td>3 pm 10/12/2019</td>
+      <td>root canal therapy root canal therapyroot canal therapyroot canal therapy root canal therapy root canal therapyroot canal therapyroot canal therapyroot canal therapy root canal therapyroot canal therapyroot canal therapy</td>
       <td>
   <a  class="btn btn-danger btn-sm" >Canceled</a>
   
          </td>
-         <td></td>
+         
       
      
     </tr>
