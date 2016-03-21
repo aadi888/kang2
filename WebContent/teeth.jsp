@@ -6,6 +6,26 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/font/flaticonteeth.css">
+
+<script type="text/javascript">
+function mousePressed(id,event) {
+    
+	
+    if (event.button == 0) {
+    	
+    	document.getElementById(id).style.color = "red";
+    	alert(id);
+    }
+    
+if (event.button == 2) {
+    	
+    	document.getElementById(id).style.color = "black";
+    	alert(id);
+    }
+}
+</script>
+
 </head>
 <body>
 <%@include file="dynamicheader.html" %>
@@ -14,21 +34,68 @@
     <h1>My Teeth</h1>
 <br/>
 <center>
-<%for(int i=0;i<16;i++){ %>
-<%if(i==12){ %>
-<i class="fa fa-viacoin" style="font-size:40px;color:red;"></i><span class="tab"></span>
-<%} else {%>
-<i class="fa fa-viacoin" style="font-size:40px;color:lightblue;"></i><span class="tab"></span>  
+<table>
+<thead>
+
+
+    <tr>
+  
+    
+  
+<%for(int i=1;i<=16;i++){ %>
+
+ <th ><div style="font-family: Flaticon;font-size: 45px;font-style: normal;margin-left: 20px;"><%=i %></div></th>
 <%} %>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+
+<%for(int i=1;i<=16;i++){ %>
+
+
+<td>
+<i class="flaticon-icon-65630" style="color:lightblue;" id="<%=i%>" onmousedown="mousePressed(<%=i %>,event)"></i><span class="tab"></span>  
+</td>
 <%} %>
-<br/><br/>
-<%for(int i=0;i<16;i++){ %>
-<%if(i==2){ %>
-<i class="fa fa-viacoin" style="font-size:40px;color:blue;"></i><span class="tab"></span>
-<%} else {%>
-<i class="fa fa-viacoin" style="font-size:40px;color:lightblue;"></i>
+</tr>
+</tbody>
+</table>
+<br/>
+<br/>
+
+<table>
+<thead>
+
+
+    <tr>
+  
+    
+  
+<%for(int i=17;i<=32;i++){ %>
+<td>
+<i class="flaticon-icon-65630" style="color:lightblue;" id="<%=i%>" onmousedown="mousePressed(<%=i %>,event)"></i><span class="tab"></span>  
+</td>
+
+ 
 <%} %>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+
+<%for(int i=17;i<=32;i++){ %>
+
+<th ><div style="font-family: Flaticon;font-size: 45px;font-style: normal;margin-left: 20px;"><%=i %></div></th>
+
 <%} %>
+</tr>
+</tbody>
+</table>
+
+
 </center>
 </div>
 <%@include file="footer.html" %>
