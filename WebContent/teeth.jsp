@@ -98,9 +98,9 @@
 				
 <div class="list-group">
   
-   <h2> <i class="flaticon-icon-91156"></i>Teeth Details</h2><br/> 
+   <h2 style="float: left;"> <i class="flaticon-icon-91156"></i>Teeth Details</h2><br/> 
   
-  <table class="table">
+  <table class="table" align="center">
   <thead>
     <tr>
       <th>Teeth Number</th>

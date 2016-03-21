@@ -113,14 +113,15 @@
 					<a href=tel:(617)%20244-8087>(Call for appointment times)</a><br/><br/>
 	Sat:		Closed<br/><br/>
 	Sun:		Closed</strong>">Getting To the Office</a></li>
-                <li class="divider"></li>
-                
-                 <li><a href="contactus.jsp">Contact Us</a></li>
+               
               
             </ul>
             </li>
             <li>
               <a href="#/">Appointments</a>
+            </li>
+            <li>
+            <a href="contactus.jsp" data-toggle="tooltip" title="Contact us/Help">Contact Us</a>
             </li>
            </ul>
 
@@ -157,8 +158,9 @@
 <div class="container">
 
  <div class="row">
- 
- <div class="col-m-6">
+ <div class="col-sm-2">
+ </div>
+ <div class="col-sm-8">
  <div class="alert alert-dismissible alert-danger">
   
   <strong>Oh snap!</strong> <a href="#" class="alert-link">Change a few things up</a>.
@@ -174,9 +176,12 @@
 			    <label for="password">Password</label>
 			    <input type="password" class="form-control" id="password" name="password" placeholder="Password">
 			  </div>
-			  <button type="submit" class="btn btn-primary">Login </button><a  onclick="forgot()" href="javascript:void(0);"><font color="red"> <u>Forgot Password ?</u></font></a>
- 
+			  <button type="submit" class="btn btn-primary">Login </button><a  onclick="forgot()" href="javascript:void(0);"><font color="red"> <u>Forgot Password ?</u></font></a><br/>
+			  <br/>
+			   <a  onclick="signup()" href="javascript:void(0);" >Don't Have An Account ? <u>Create One</u></a>
+               
  </div>
+ 
  
  <div id="signup">
  
@@ -259,6 +264,7 @@
  
  
  </div>
+ 
  </div>
  
  
