@@ -9,21 +9,16 @@
 <link rel="stylesheet" href="css/font/flaticonteeth.css">
 
 <script type="text/javascript">
-function mousePressed(id,event) {
-    
-	
-    if (event.button == 0) {
-    	
-    	document.getElementById(id).style.color = "red";
-    	alert(id);
-    }
-    
-if (event.button == 2) {
-    	
-    	document.getElementById(id).style.color = "black";
-    	alert(id);
-    }
-}
+
+ function showMyTeethDetails(id)
+ {
+	 alert("get ajax request for particular " + id);
+	 
+	 document.getElementById("teethNumber").innerHTML = id+".number";
+	 document.getElementById("teethName").innerHTML = id+".teethName";
+	 document.getElementById("description").innerHTML = id+".descriptiondescriptiondescriptiondescriptiond";
+ }
+
 </script>
 
 </head>
@@ -56,7 +51,7 @@ if (event.button == 2) {
 
 
 <td>
-<i class="flaticon-icon-65630" style="color:lightblue;" id="<%=i%>" onmousedown="mousePressed(<%=i %>,event)"></i><span class="tab"></span>  
+<i class="flaticon-icon-65630" style="color:lightblue;" id="<%=i%>" onclick="showMyTeethDetails(<%=i%>)" ></i><span class="tab"></span>  
 </td>
 <%} %>
 </tr>
@@ -75,7 +70,7 @@ if (event.button == 2) {
   
 <%for(int i=17;i<=32;i++){ %>
 <td>
-<i class="flaticon-icon-65630" style="color:lightblue;" id="<%=i%>" onmousedown="mousePressed(<%=i %>,event)"></i><span class="tab"></span>  
+<i class="flaticon-icon-65630" style="color:lightblue;" id="<%=i%>" onclick="showMyTeethDetails(<%=i%>)" ></i><span class="tab"></span>  
 </td>
 
  
@@ -95,9 +90,50 @@ if (event.button == 2) {
 </tbody>
 </table>
 
+<br/>
+<br/>
+
+
+<div class="col-sm-12" style="background-color: #F0FFFF;margin-bottom: 20px;">
+				
+<div class="list-group">
+  
+   <h2> <i class="flaticon-icon-91156"></i>Teeth Details</h2><br/> 
+  
+  <table class="table">
+  <thead>
+    <tr>
+      <th>Teeth Number</th>
+      <th>Teeth Name</th>
+      <th>Description</th>
+     
+    </tr>
+  </thead>
+  
+  <tbody>
+    <tr>
+      <td id="teethNumber"></td>
+      <td id="teethName"></td>
+      <td id="description"></td>
+  </tr>
+   </tbody>
+  </table>
+  
+</div>
+</div>
+
 
 </center>
+
+
 </div>
+
+
 <%@include file="footer.html" %>
+
+
+
+
+  
 </body>
 </html>
