@@ -30,7 +30,7 @@
       <div class="page-header">
 <div style="float: right;position: relative;">     
   <h2>Healthy Smile, Healthy You</h2><br/>
-  <p><a class="btn btn-primary btn-lg" href="#" role="button">Schedule a Consultation</a></p>
+  <p><a class="btn btn-primary btn-lg" href="events.jsp" role="button">Schedule a Consultation</a></p>
   </div>
 </div>
       <!-- end -->
@@ -56,7 +56,7 @@
 <div style="float: left;position: relative;">
         <h2>Relaxed and Friendly</h2><br/>
   
-  <p><a class="btn btn-primary btn-lg" href="modelAppointment.html" role="button">Schedule an Appointment</a></p>
+  <p><a class="btn btn-primary btn-lg" href="events.jsp" role="button">Schedule an Appointment</a></p>
       </div>
       </div>
     </div>
@@ -86,7 +86,7 @@
     <center>
       <div class="caption">
         <h3>Register With Us</h3>
-        <i class="fa fa-lock" style="font-size:160px;color:lightblue;"></i>
+        <a class="fa fa-lock" style="font-size:160px;color:lightblue;" href="login.jsp" ></a>
          
       </div>
       </center>
@@ -99,7 +99,7 @@
       <div class="caption">
         <h3>Schedule An Appointment</h3>
         
-        <i class="fa fa-clock-o" style="font-size:160px;color:lightblue;"></i>
+        <a class="fa fa-clock-o" style="font-size:160px;color:lightblue;" href="events.jsp"></a>
       
         
       </div>
@@ -112,7 +112,7 @@
       <div class="caption">
         <h3>Wait for confirmation</h3>
         
-          <i class="fa fa-envelope" style="font-size:160px;color:lightblue;"></i>
+          <a class="fa fa-envelope" style="font-size:160px;color:lightblue;" href="contactus.jsp"></a>
         
       </div>
       </center>

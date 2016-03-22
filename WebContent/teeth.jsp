@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -24,9 +25,11 @@
 </head>
 <body>
 <%@include file="dynamicheader.html" %>
+
 <div class="container">
 <br/>
     <h1>My Teeth</h1>
+    
 <br/>
 <center>
 <table>
@@ -36,24 +39,22 @@
     <tr>
   
     
-  
-<%for(int i=1;i<=16;i++){ %>
-
- <th ><div style="font-family: Flaticon;font-size: 45px;font-style: normal;margin-left: 20px;"><%=i %></div></th>
-<%} %>
-</tr>
+ <c:forEach var="i" begin="1" end="16">
+<th ><div style="font-family: Flaticon;font-size: 45px;font-style: normal;margin-left: 20px;"><c:out value="${i}"></c:out></div></th>
+</c:forEach>
+  </tr>
 </thead>
 
 <tbody>
 <tr>
 
-<%for(int i=1;i<=16;i++){ %>
+ <c:forEach var="i" begin="1" end="16">
 
 
 <td>
-<i class="flaticon-icon-65630" style="color:lightblue;" id="<%=i%>" onclick="showMyTeethDetails(<%=i%>)" ></i><span class="tab"></span>  
+<i class="flaticon-icon-65630" style="color:lightblue;" id="${i}" onclick="showMyTeethDetails(${i})" ></i><span class="tab"></span>  
 </td>
-<%} %>
+</c:forEach>
 </tr>
 </tbody>
 </table>
@@ -68,24 +69,24 @@
   
     
   
-<%for(int i=17;i<=32;i++){ %>
+<c:forEach var="i" begin="17" end="32">
 <td>
-<i class="flaticon-icon-65630" style="color:lightblue;" id="<%=i%>" onclick="showMyTeethDetails(<%=i%>)" ></i><span class="tab"></span>  
+<i class="flaticon-icon-65630" style="color:lightblue;" id="${i}" onclick="showMyTeethDetails(${i})" ></i><span class="tab"></span>  
 </td>
 
  
-<%} %>
+</c:forEach>
 </tr>
 </thead>
 
 <tbody>
 <tr>
 
-<%for(int i=17;i<=32;i++){ %>
+<c:forEach var="i" begin="17" end="32">
 
-<th ><div style="font-family: Flaticon;font-size: 45px;font-style: normal;margin-left: 20px;"><%=i %></div></th>
+<th ><div style="font-family: Flaticon;font-size: 45px;font-style: normal;margin-left: 20px;">${i}</div></th>
 
-<%} %>
+</c:forEach>
 </tr>
 </tbody>
 </table>
