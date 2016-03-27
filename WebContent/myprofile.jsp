@@ -9,6 +9,7 @@
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/myprofilefunctions.js"></script>
  <script type="text/javascript" src="js/myprofileready.js"></script>
+ <script type="text/javascript" src="js/ajax.js"></script>
   
 
          <style>
@@ -81,7 +82,7 @@
   
           		<div id="MyProfile">
           		 <div id="showPersonalForm">
-          		<form class="form-horizontal">
+          		<form class="form-horizontal" id="showPersonalForm">
   
    <div class="col-sm-12" style="background-color: #F0FFFF;margin-bottom: 20px;">
 				<h2><i class="fa fa-info"></i>&nbsp; Personal Information </h2>
@@ -89,19 +90,19 @@
   
 
  <div class="form-group">
-  <label class="control-label" for="disabledInput">First Name</label>&nbsp;&nbsp;Aadish
+  <label class="control-label" for="disabledInput">First Name</label>&nbsp;&nbsp;<div id="firstName" style="display: inline;"></div>
   
 </div>
 <div class="form-group">
-  <label class="control-label" for="disabledInput">Middle Name</label>&nbsp;&nbsp;D
+  <label class="control-label" for="disabledInput">Middle Name</label>&nbsp;&nbsp;<div id="middleName" style="display: inline;"></div>
   
 </div>
 <div class="form-group">
-  <label class="control-label" for="disabledInput">Last Name</label>&nbsp;&nbsp;Shah
+  <label class="control-label" for="disabledInput">Last Name</label>&nbsp;&nbsp;<div id="lastName" style="display: inline;"></div>
   
 </div>
  <div class="form-group">
-  <label class="control-label" for="disabledInput">DOB</label>&nbsp;&nbsp;07/22/1992
+  <label class="control-label" for="disabledInput">DOB</label>&nbsp;&nbsp;<div id="dateOfBirth" style="display: inline;"></div>
   
 </div>
 
@@ -114,7 +115,7 @@
   </form>
 </div>          		
   		<div id="hidePersonalForm">
-          		<form class="form-horizontal">
+          		<form class="form-horizontal" id="hidePersonalForm1">
   
   <div class="col-sm-12" style="background-color: #F0FFFF;margin-bottom: 20px;">
 				<h2><i class="fa fa-info"></i>&nbsp; Personal Information </h2>
@@ -122,27 +123,28 @@
   
     <div class="form-group">
  <label class="control-label" for="disabledInput">First Name</label>
-  <input class="form-control" id="disabledInput" type="text" placeholder="Aadish" >
+  <input class="form-control" id="firstName"  type="text" placeholder="" name="firstName">
 </div>
 <div class="form-group">
  <label class="control-label" for="disabledInput">Middle Name</label>
-  <input class="form-control" id="disabledInput" type="text" placeholder="Aadish" >
+  <input class="form-control" id="middleName"  type="text" placeholder="" name="middleName">
 </div>
 <div class="form-group">
  <label class="control-label" for="disabledInput">Last Name</label>
-  <input class="form-control" id="disabledInput" type="text" placeholder="Shah" >
+  <input class="form-control" id="lastName"  type="text" placeholder="" name="lastName" >
 </div>
  <div class="form-group">
   <label class="control-label" for="disabledInput">DOB</label>
-  <input class="form-control" id="disabledInput" type="number" placeholder="mm/dd/yyyy" >
+  <input class="form-control" id="dateOfBirth" type="number" placeholder=""  name="dateOfBirth" >
 </div>
  
 
- <div class="form-group">
-  <button type="submit" class="btn btn-primary">Update</button>
- </div>    
+   
   </div>
   </form>
+  <div class="form-group">
+  <button  class="btn btn-primary" id="updatePersonal">Update</button>&nbsp;&nbsp;<i class="fa fa-spinner fa-pulse" style="font-size: 30px;visibility: hidden;" id="spinner"></i>
+  </div>
   </div>
   
   
@@ -156,18 +158,18 @@
 
  
 <div class="form-group">
-  <label class="control-label" for="disabledInput">Address 1</label>&nbsp;&nbsp;935 Dorchester Avenue
+  <label class="control-label" for="disabledInput">Address 1</label>&nbsp;&nbsp;<div id="address1" style="display: inline;"></div>
   
 </div>
 <div class="form-group">
-  <label class="control-label" for="disabledInput">Address 2</label>&nbsp;&nbsp;Apt #2 , Dorchester MA 02125
+  <label class="control-label" for="disabledInput">Address 2</label>&nbsp;&nbsp;<div id="address2" style="display: inline;"></div>
   
 </div>
  
 <div class="form-group">
-  <label class="control-label" for="disabledInput">City</label>&nbsp;&nbsp;Boston&nbsp;&nbsp;
-  <label class="control-label" for="disabledInput">State</label>&nbsp;&nbsp;MA&nbsp;&nbsp;
-  <label class="control-label" for="disabledInput">Zip Code</label>&nbsp;&nbsp;02125&nbsp;&nbsp;
+  <label class="control-label" for="disabledInput">City</label>&nbsp;&nbsp;<div id="city" style="display: inline;"></div>&nbsp;&nbsp;
+  <label class="control-label" for="disabledInput">State</label>&nbsp;&nbsp;<div id="state" style="display: inline;"></div>&nbsp;&nbsp;
+  <label class="control-label" for="disabledInput">Zip Code</label>&nbsp;&nbsp;<div id="zipcode" style="display: inline;"></div>&nbsp;&nbsp;
   
 </div>
 
@@ -180,7 +182,7 @@
   </form>
 </div>          		
   		<div id="hideAddressForm">
-          		<form class="form-horizontal">
+          		<form class="form-horizontal" id="hideAddressForm1">
   
   <div class="col-sm-12" style="background-color: #F0FFFF;margin-bottom: 20px;">
 				<h2><i class="fa fa-map-marker"></i>&nbsp; Address Information </h2>
@@ -189,31 +191,32 @@
   
 <div class="form-group">
   <label class="control-label" for="disabledInput">Address 1</label>
-  <input class="form-control" id="disabledInput" type="text" placeholder="935 dorchester avenue" >
+  <input class="form-control" id="address1" name="address1" type="text" placeholder="" >
 </div>
 <div class="form-group">
   <label class="control-label" for="disabledInput">Address 2</label>
-  <input class="form-control" id="disabledInput" type="text" placeholder="Apt #2" >
+  <input class="form-control" id="address2" name="address2" type="text" placeholder="" >
 </div>
 <div class="form-group">
   <label class="control-label" for="disabledInput">City</label>
-  <input class="form-control" id="disabledInput" type="text" placeholder="Boston" >
+  <input class="form-control" id="city" name="city" type="text" placeholder="" >
 </div>
 <div class="form-group">
   <label class="control-label" for="disabledInput">State</label>
-  <input class="form-control" id="disabledInput" type="text" placeholder="MA" >
+  <input class="form-control" id="state" name="state" type="text" placeholder="" >
 </div>
 <div class="form-group">
   <label class="control-label" for="disabledInput">Zip Code</label>
-  <input class="form-control" id="disabledInput" type="number" placeholder="02125" >
+  <input class="form-control" id="zipcode" name="zipcode" type="number" placeholder="" >
 </div> 
  
 
- <div class="form-group">
-  <button type="submit" class="btn btn-primary">Update</button>
- </div>    
+   
   </div>
   </form>
+    <div class="form-group">
+  <button  class="btn btn-primary" id="updateAddress">Update</button>&nbsp;&nbsp;<i class="fa fa-spinner fa-pulse" style="font-size: 30px;visibility: hidden;" id="spinner"></i>
+  </div>
   </div>
           		
           		
@@ -225,12 +228,12 @@
   
   
     <div class="form-group">
-  <label class="control-label" for="disabledInput">Email</label>&nbsp;&nbsp;shahadish@yahoo.com
+  <label class="control-label" for="disabledInput">Email</label>&nbsp;&nbsp;<div id="email" style="display: inline;"></div>
   
 </div>
  
  <div class="form-group">
-  <label class="control-label" for="disabledInput">Number</label>&nbsp;&nbsp;617 959 9657
+  <label class="control-label" for="disabledInput">Number</label>&nbsp;&nbsp;<div id="phoneNumber" style="display: inline;"></div>
   
 </div>
 
@@ -247,18 +250,18 @@
           		
   
    <div class="col-sm-12" style="background-color: #F0FFFF;margin-bottom: 20px;">
-   <form class="form-horizontal" id="contactForm">
+   <form class="form-horizontal" id="hideContactForm1">
 				<h2><i class="fa fa-phone"></i> Contact Information </h2>
   
   
     <div class="form-group">
   <label class="control-label" for="disabledInput">Email</label>
-  <input class="form-control" id="email" type="text" placeholder="shahadish@yahoo.com" disabled="">
+  <input class="form-control" id="email" name="email" type="text" placeholder="" disabled="">
 </div>
  
  <div class="form-group">
   <label class="control-label" for="disabledInput">Number</label>
-  <input class="form-control" id="number" type="text" placeholder="98238993">
+  <input class="form-control" id="phoneNumber" name="phoneNumber" type="text" placeholder="">
 </div>
  </form>     
  <div class="form-group">
@@ -278,14 +281,14 @@
   
   
     <div class="form-group">
-  <label class="control-label" for="disabledInput">Emergency Contact Name</label>&nbsp;&nbsp;Aadish
+  <label class="control-label" for="disabledInput">Emergency Contact Name</label>&nbsp;&nbsp;<div id="name" style="display: inline;"></div>
   
 </div>
  <div class="form-group">
-  <label class="control-label" for="disabledInput">Emergency Contact Number</label>&nbsp;&nbsp;Shah
+  <label class="control-label" for="disabledInput">Emergency Contact Number</label>&nbsp;&nbsp;<div id="phoneNumber" style="display: inline;"></div>
   </div>
   <div class="form-group">
-  <label class="control-label" for="disabledInput">Relation </label>&nbsp;&nbsp;Father
+  <label class="control-label" for="disabledInput">Relation </label>&nbsp;&nbsp;<div id="relation" style="display: inline;"></div>
   </div>
  
 <div class="form-group">
@@ -296,7 +299,7 @@
   </form>
 </div>          		
   		<div id="hideEmergencyForm">
-          		<form class="form-horizontal">
+          		<form class="form-horizontal" id="hideEmergencyForm1">
   
   <div class="col-sm-12" style="background-color: #F0FFFF;margin-bottom: 20px;">
 				<h2><i class="fa fa-exclamation-triangle"></i>&nbsp; Emergency Information </h2>
@@ -304,15 +307,15 @@
   
     <div class="form-group">
  <label class="control-label" for="disabledInput">Emergency Contact Name</label>
-  <input class="form-control" id="disabledInput" type="text" placeholder="Aadish" >
+  <input class="form-control" id="name" name="name" type="text" placeholder="" >
 </div>
 <div class="form-group">
  <label class="control-label" for="disabledInput">Emergency Contact Number</label>
-  <input class="form-control" id="disabledInput" type="text" placeholder="Shah" >
+  <input class="form-control" id="phoneNumber" name="phoneNumber" type="text" placeholder="" >
 </div>
 <div class="form-group">
   <label for="relation">Relation</label>
-  <select class="form-control" id="sel1">
+  <select class="form-control" id="relation" name="relation">
     <option>father</option>
     <option>mother</option>
     <option>sister</option>
@@ -324,11 +327,12 @@
 </div>
 
 
- <div class="form-group">
-  <button type="submit" class="btn btn-primary">Update</button>
- </div>    
+   
   </div>
   </form>
+  <div class="form-group">
+ <button class="btn btn-primary" id="updateEmergency">Update</button>&nbsp;&nbsp;<i class="fa fa-spinner fa-pulse" style="font-size: 30px;visibility: hidden;" id="spinner"></i>
+ </div>
   </div>
   
   

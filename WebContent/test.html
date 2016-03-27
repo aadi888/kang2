@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+
+    $(function() {
+
+        $("#bt1").click(function() {
+
+            var f = $("#form1");
+            var formData = f.serialize();
+
+            alert(formData);
+        });
+
+    }); 
+</script> 
+
+ <div id="div1">
+      <form id="form1" action="/Home/Test1" method="post">
+        <div id="div2">
+            <input id="input1" type="text" value="2" name="input" />
+        </div>    
+      </form>
+  </div>
+
+ <input type="submit" id="bt1" />
+
+</body>
+</html>
