@@ -6,9 +6,18 @@
     "note": "cleaning teeth",
     "requestInsertedTime": "02-25-2016 : 00:00",
     "appointmentStartTime": "03-01-2016 : 00:00",
-    "status": "WAITING_FOR_APPROVAL",
+    "status": "PENDING",
     "appointment": null
-}, {
+}, 
+{
+    "appointmentRequestID": 3,
+    "patientID": 1,
+    "note": "cleaning teeth",
+    "requestInsertedTime": "02-25-2016 : 00:00",
+    "appointmentStartTime": "03-01-2016 : 00:00",
+    "status": "ACCEPTED",
+    "appointment": null
+},{
     "appointmentRequestID": 2,
     "patientID": 1,
     "note": "Extract teeth",

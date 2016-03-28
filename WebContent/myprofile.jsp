@@ -407,66 +407,9 @@
 <div class="list-group">
   
    <h2> <i class="fa fa-check"></i> Confirmed </h2><br/> 
+  <div id="appointmentsForTemp">
   
-  <table class="table">
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>Appointment Start Time</th>
-      <th>Note</th>
-      <th>Expected Amount</th>
-      <th>Amount Paid</th>
-      <th>Status</th>
-      <th></th>
-    </tr>
-  </thead>
-  
-  <tbody>
-    <tr>
-      <td>1</td>
-      <td>3 pm 10/12/2017</td>
-      <td>root canal therapy root canal therapyroot canal therapyroot canal therapy root canal therapy root canal therapyroot canal therapyroot canal therapyroot canal therapy root canal therapyroot canal therapyroot canal therapy</td>
-      <td>$200 </td>
-      <td>$0 </td>
-      <td>
-  <a  class="btn btn-info btn-sm" >Completed</a>
-  
-         </td>
-         <td></td>
-    </tr>
-   </tbody>
-   
-   <tbody>
-    <tr>
-      <td>2</td>
-      <td>3 pm</td>
-      <td>root canal therapy root canal therapyroot canal therapyroot canal therapy root canal therapy root canal therapyroot canal therapyroot canal therapyroot canal therapy root canal therapyroot canal therapyroot canal therapy</td>
-      <td>$200 </td>
-      <td>$0 </td>
-      <td>
-  <a  class="btn btn-success btn-sm" >Confirmed</a>
-  
-         </td>
-         <td><a href="#"><i class="fa fa-times" style="font-size: 30px;color: red;"></i></a></td>
-    </tr>
-   </tbody>
-   
-   <tbody>
-    <tr>
-      <td>3</td>
-      <td>3 pm</td>
-      <td>root canal therapy root canal therapyroot canal therapyroot canal therapy root canal therapy root canal therapyroot canal therapyroot canal therapyroot canal therapy root canal therapyroot canal therapyroot canal therapy</td>
-      <td>$200 </td>
-      <td>$0 </td>
-      <td>
-  <a  class="btn btn-success btn-sm" >Confirmed</a>
-  
-         </td>
-         <td><a href="#"><i class="fa fa-times" style="font-size: 30px;color: red;"></i></a></td>
-    </tr>
-   </tbody>
-  </table>
-  
+  </div>
   
   
   
@@ -477,46 +420,11 @@
 <div class="list-group" >
   
    <h2> <i class="fa fa-exclamation-triangle"></i> Requested Appointments <a href="events.jsp" style="float: right;"><i class="fa fa-plus-circle"  >Schedule New</i></a></h2><br/> 
+
+   
+  <div id="requestedAppointmentsForTemp"></div>
   
-  <table class="table">
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>Appointment Start Time</th>
-      <th>Note</th>
-      <th>Status</th>
-      
-      
-    </tr>
-  </thead>
-  
-  <tbody>
-    <tr>
-      <td>1</td>
-      <td>3 pm 10/12/2019</td>
-      <td>root canal therapy root canal therapyroot canal therapyroot canal therapy root canal therapy root canal therapyroot canal therapyroot canal therapyroot canal therapy root canal therapyroot canal therapyroot canal therapy</td>
-      <td>
-  <a  class="btn btn-warning btn-sm" >Pending</a>
-  
-         </td>
-         
-      
-     
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>3 pm 10/12/2019</td>
-      <td>root canal therapy root canal therapyroot canal therapyroot canal therapy root canal therapy root canal therapyroot canal therapyroot canal therapyroot canal therapy root canal therapyroot canal therapyroot canal therapy</td>
-      <td>
-  <a  class="btn btn-danger btn-sm" >Canceled</a>
-  
-         </td>
-         
-      
-     
-    </tr>
-   </tbody>
-  </table>  
+ 
  
   
   
@@ -535,78 +443,11 @@
 <div class="list-group" ">
   
    <h2> <i class="fa fa-gavel"></i> My Treatments </h2><br/> 
-  <div class="col-sm-6">
-  <ul class="list-group">
-    <li class="list-group-item">
-     
+ 
+   <div id="treatmentsForTemp">
+  
+     </div>
    
-    <p class="list-group-item-text">
-   <form action="teeth.jsp?treatmentId=0">
-    <div class="form-group">
-  <label class="control-label" for="disabledInput">Patient Name</label>&nbsp;&nbsp;xyz
-  
-</div>
-    
-    <div class="form-group">
-  <label class="control-label" for="disabledInput">Treatment Date</label>&nbsp;&nbsp;10/12/1992
-  
-</div>
-<div class="form-group">
-  <label class="control-label" for="disabledInput">Treatment Expected Time </label>&nbsp;&nbsp;2 Hours
-  
-</div>
-
-<div class="form-group">
-  <label class="control-label" for="disabledInput">Treatment note</label>&nbsp;&nbsp;Root canal therapy
-  
-</div>
-<div class="form-group">
-  <label class="control-label" for="disabledInput">Treatment Status</label>&nbsp;&nbsp;Completed
-  
-</div>
-
-<button type="submit" class="btn btn-primary btn-sm" >Show Me My Treatment</button>
-       
-     </form>
-    </li> 
-  </ul>
-  </div>
-   <div class="col-sm-6">
-  <ul class="list-group">
-    <li class="list-group-item">
-     
-   
-    <p class="list-group-item-text">
-   <form action="teeth.jsp?treatmentId=0">
-    <div class="form-group">
-  <label class="control-label" for="disabledInput">Patient Name</label>&nbsp;&nbsp;xyz
-  
-</div>
-    
-    <div class="form-group">
-  <label class="control-label" for="disabledInput">Treatment Date</label>&nbsp;&nbsp;10/12/1992
-  
-</div>
-<div class="form-group">
-  <label class="control-label" for="disabledInput">Treatment Expected Time </label>&nbsp;&nbsp;2 Hours
-  
-</div>
-
-<div class="form-group">
-  <label class="control-label" for="disabledInput">Treatment note</label>&nbsp;&nbsp;Root canal therapy
-  
-</div>
-<div class="form-group">
-  <label class="control-label" for="disabledInput">Treatment Status</label>&nbsp;&nbsp;Completed
-  
-</div>
-
-<button type="submit" class="btn btn-primary btn-sm" >Show Me My Treatment</button>
-       
-     </form>
-    </li> 
-  </ul>
-  </div>
 </div>
 </div>
 

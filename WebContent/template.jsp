@@ -70,6 +70,128 @@
 </div>
 
 </script>
+<script type="text/template" id="appointmentsTemp">
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Appointment Start Time</th>
+      <th>Note</th>
+      <th>Expected Amount</th>
+      <th>Amount Paid</th>
+      <th>Status</th>
+      <th></th>
+    </tr>
+  </thead>
+  
+  
+   
+   
+   
+
+  
+
+<tbody>
+    <tr>
+      <td>{{counter}}</td>
+      <td>{{appointmentStartTime}}</td>
+      <td>{{note}}</td>
+      <td>${{expectedAmount}} </td>
+      <td>${{amountPaid}}</td>
+      <td>
+
+
+
+    <a  class="btn btn-info btn-sm" >{{status}}</a>
+
+
+
+  
+  
+         </td>
+         <td><a href="#"><i class="fa fa-times" style="font-size: 30px;color: red;"></i></a></td>
+    </tr>
+   </tbody>
+
+
+</table>
+</script>
+
+<script type="text/template" id="requestedAppointmentsTemp">
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Appointment Start Time</th>
+      <th>Note</th>
+     
+      <th>Status</th>
+ 	  <th></th>
+    </tr>
+  </thead>
+
+<tbody>
+ 
+
+    <tr >
+      <td>{{counter}}</td>
+      <td>{{appointmentStartTime}}</td>
+       <td>{{note}}</td>
+      <td>
+  <a  class="btn btn-warning btn-sm">{{status}}</a>
+  
+         </td>
+         <td><a href="#"><i class="fa fa-times" style="font-size: 30px;color: red;"></i></a></td>
+      
+     
+    </tr>
+     </tbody>
+
+</table>
+
+   
+</script>
+
+<script type="text/template" id="requestedTreatmentsTemp">
+ <div class="col-sm-6">
+  <ul class="list-group">
+    <li class="list-group-item">
+     
+   
+    <p class="list-group-item-text">
+   
+ <form action="teeth.jsp">
+    <div class="form-group">
+  <label class="control-label" for="disabledInput">Patient Name</label>&nbsp;&nbsp;{{insuranceProviderName}}
+  
+</div>
+    
+    <div class="form-group">
+  <label class="control-label" for="disabledInput">Treatment Date</label>&nbsp;&nbsp;{{insuranceProviderName}}
+  
+</div>
+<div class="form-group">
+  <label class="control-label" for="disabledInput">Treatment Expected Time </label>&nbsp;&nbsp;{{insuranceProviderName}}
+  
+</div>
+
+<div class="form-group">
+  <label class="control-label" for="disabledInput">Treatment note</label>&nbsp;&nbsp;{{insuranceProviderName}}
+  
+</div>
+<div class="form-group">
+  <label class="control-label" for="disabledInput">Treatment Status</label>&nbsp;&nbsp;{{insuranceProviderName}}
+  
+</div>
+
+<button type="submit" class="btn btn-primary btn-sm" >Show Me My Treatment</button>
+       
+     </form>
+
+    </li> 
+  </ul>
+  </div>
+</script>
 </head>
 
 </html>

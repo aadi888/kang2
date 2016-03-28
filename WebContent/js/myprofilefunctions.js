@@ -38,7 +38,7 @@
  
  $.get("json/patient_sentmessages.json", function(data){
 	  
-	  
+	 $('#sentmessages').empty();
 	  $.each(data, function(key,val) {
         
 		  var template = $('#sentMessageTemp').html();
@@ -53,7 +53,7 @@
  
  $.get("json/patient_receivedmessages.json", function(data){
 	  
-	  
+	 $('#receivedmessages').empty();
 	  $.each(data, function(key,val) {
        
 		  var template = $('#receivedMessageTemp').html();
@@ -77,6 +77,36 @@
      $("#Insurance").hide();
      $("#Payment").hide();
  $("#MyProfile").hide();
+ 
+ $.get("json/patient_appointments.json", function(data){
+	 $('#appointmentsForTemp').empty();
+	  var i=1;
+	  $.each(data, function(key,val) {
+       
+		  var template = $('#appointmentsTemp').html();
+		  val.counter=i;
+		  i++;
+		    var html = Mustache.to_html(template, val);
+		    $('#appointmentsForTemp').append(html);
+	});
+	 
+	             
+	          });
+ 
+ $.get("json/patient_appointmentrequests.json", function(data){
+	 $('#requestedAppointmentsForTemp').empty();
+	  var i=1;
+	  $.each(data, function(key,val) {
+       
+		  var template = $('#requestedAppointmentsTemp').html();
+		  val.counter=i;
+		  i++;
+		    var html = Mustache.to_html(template, val);
+		    $('#requestedAppointmentsForTemp').append(html);
+	});
+	 
+	             
+	          });
  }
  function showTreatments()
  {
@@ -86,6 +116,21 @@
      $("#Insurance").hide();
      $("#Payment").hide();
  $("#MyProfile").hide();
+ 
+ $.get("json/patient_insurances.json", function(data){
+	 $('#treatmentsForTemp').empty();
+	  var i=1;
+	  $.each(data, function(key,val) {
+       
+		  var template = $('#requestedTreatmentsTemp').html();
+		  val.counter=i;
+		  i++;
+		    var html = Mustache.to_html(template, val);
+		    $('#treatmentsForTemp').append(html);
+	});
+	 
+	             
+	          });
  }
  function showInsurance()
  {
@@ -98,7 +143,7 @@
  
  $.get("json/patient_insurances.json", function(data){
 	  
-	  
+	 $('#myinsurances').empty();
 	  $.each(data, function(key,val) {
        
 		  var template = $('#insurancesTemp').html();
