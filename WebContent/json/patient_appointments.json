@@ -1,0 +1,43 @@
+
+
+[{
+    "appointmentID": 1,
+    "patientID": 1,
+    "appointmentInsertedTime": "03-02-2016 : 00:00",
+    "appointmentStartTime": "03-01-2016 : 00:00",
+    "fakeCalEventID": "yr73988",
+    "actualCalEventID": "fht789w76",
+    "note": "",
+    "expectedAmount": null,
+    "amountPaid": null,
+    "status": "CONFIRMED",
+    "appointmentRequest": {
+        "appointmentRequestID": 1,
+        "patientID": 1,
+        "note": "cleaning teeth",
+        "requestInsertedTime": "02-25-2016 : 00:00",
+        "appointmentStartTime": "03-01-2016 : 00:00",
+        "status": "WAITING_FOR_APPROVAL",
+        "appointment": null
+    }
+}, {
+    "appointmentID": 2,
+    "patientID": 1,
+    "appointmentInsertedTime": "03-18-2016 : 00:00",
+    "appointmentStartTime": "03-17-2016 : 00:00",
+    "fakeCalEventID": "yr73988",
+    "actualCalEventID": "fhtuyiw76",
+    "note": "",
+    "expectedAmount": null,
+    "amountPaid": null,
+    "status": "CONFIRMED",
+    "appointmentRequest": {
+        "appointmentRequestID": 2,
+        "patientID": 1,
+        "note": "Extract teeth",
+        "requestInsertedTime": "03-01-2016 : 00:00",
+        "appointmentStartTime": "03-17-2016 : 00:00",
+        "status": "ACCEPTED",
+        "appointment": null
+    }
+}]

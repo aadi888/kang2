@@ -5,12 +5,22 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+<script type="text/javascript" src="js/mustache.js"></script>
+
+
+
+
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/myprofilefunctions.js"></script>
  <script type="text/javascript" src="js/myprofileready.js"></script>
  <script type="text/javascript" src="js/ajax.js"></script>
-  
+ 
+ 
+ <%@include file="template.jsp" %>
+
+
+
 
          <style>
         .hide {
@@ -27,6 +37,9 @@
 
 <%@include file="dynamicheader.html" %>
 <div class="container">
+
+  	
+  
 <br/>
     <h1>My Dash Board</h1>
 <br/>
@@ -78,8 +91,7 @@
           
           	<div class="col-sm-9">
           	
-          	
-  
+        
           		<div id="MyProfile">
           		 <div id="showPersonalForm">
           		<form class="form-horizontal" id="showPersonalForm">
@@ -351,14 +363,15 @@
 				
 <div class="list-group" ">
   
+  
    <h2> <i class="fa fa-share"></i> Sent Messages <a href="" style="float: right;" data-toggle="modal" data-target="#messageModal" ><i class="fa fa-plus-circle"  >Compose</i></a></h2><br/> 
   
-   <ul class="list-group">
-    <li class="list-group-item"><p class="list-group-item-text">show here 2 lines of message by default ..... <a class="read-more-show hide" href="#">Read More</a> <span class="read-more-content">Egestas mollitia quos metus natus assumenda ullam suscipit ultricies. Voluptas, nihil natoque elementum error ligula exercitationem aliquid tempor mauris penatibus. Suspendisse! Rutrum volutpat adipiscing nascetur cras conubia cupidatat! <a class="read-more-hide hide" href="#">Read Less</a></span></p><p><small style="float: right;">12/12/2014</small></p></li>
-    <li class="list-group-item"><p class="list-group-item-text">show here 2 lines of message by default ..... <a class="read-more-show hide" href="#">Read More</a> <span class="read-more-content">Egestas mollitia quos metus natus assumenda ullam suscipit ultricies. Voluptas, nihil natoque elementum error ligula exercitationem aliquid tempor mauris penatibus. Suspendisse! Rutrum volutpat adipiscing nascetur cras conubia cupidatat! <a class="read-more-hide hide" href="#">Read Less</a></span></p><p><small style="float: right;">12/12/2014</small></p></li>
-    <li class="list-group-item"><p class="list-group-item-text">show here 2 lines of message by default ..... <a class="read-more-show hide" href="#">Read More</a> <span class="read-more-content">Egestas mollitia quos metus natus assumenda ullam suscipit ultricies. Voluptas, nihil natoque elementum error ligula exercitationem aliquid tempor mauris penatibus. Suspendisse! Rutrum volutpat adipiscing nascetur cras conubia cupidatat! <a class="read-more-hide hide" href="#">Read Less</a></span></p><p><small style="float: right;">12/12/2014</small></p></li>
+  <ul class="list-group">
+  <div id="sentmessages">
+   
+  </div>
   </ul>
-  <script src="js/readmore.js"></script>
+  
   
   
   
@@ -375,12 +388,13 @@
   
    <h2><i class="fa fa-reply"></i> Received Messages</h2><br/>
   
+  
+   
   <ul class="list-group">
-    <li class="list-group-item"><p class="list-group-item-text">show here 2 lines of message by default ..... <a class="read-more-show hide" href="#">Read More</a> <span class="read-more-content">Egestas mollitia quos metus natus assumenda ullam suscipit ultricies. Voluptas, nihil natoque elementum error ligula exercitationem aliquid tempor mauris penatibus. Suspendisse! Rutrum volutpat adipiscing nascetur cras conubia cupidatat! <a class="read-more-hide hide" href="#">Read Less</a></span></p><p><small style="float: right;">12/12/2014</small></p></li>
-    <li class="list-group-item"><p class="list-group-item-text">show here 2 lines of message by default ..... <a class="read-more-show hide" href="#">Read More</a> <span class="read-more-content">Egestas mollitia quos metus natus assumenda ullam suscipit ultricies. Voluptas, nihil natoque elementum error ligula exercitationem aliquid tempor mauris penatibus. Suspendisse! Rutrum volutpat adipiscing nascetur cras conubia cupidatat! <a class="read-more-hide hide" href="#">Read Less</a></span></p><p><small style="float: right;">12/12/2014</small></p></li>
-    <li class="list-group-item"><p class="list-group-item-text">show here 2 lines of message by default ..... <a class="read-more-show hide" href="#">Read More</a> <span class="read-more-content">Egestas mollitia quos metus natus assumenda ullam suscipit ultricies. Voluptas, nihil natoque elementum error ligula exercitationem aliquid tempor mauris penatibus. Suspendisse! Rutrum volutpat adipiscing nascetur cras conubia cupidatat! <a class="read-more-hide hide" href="#">Read Less</a></span></p><p><small style="float: right;">12/12/2014</small></p></li>
+  <div id="receivedmessages">
+   
+  </div>
   </ul>
-  <script src="js/readmore.js"></script> 
 
 </div>
 </div>
@@ -609,97 +623,9 @@
 <div class="list-group" ">
   
    <h2> <i class="fa fa-medkit"></i> My Insurances <a href="" style="float: right;" data-toggle="modal" data-target="#insuranceModal" ><i class="fa fa-plus-circle"  >Add New</i></a></h2><br/> 
-  <div class="col-sm-6">
-  <ul class="list-group">
-    <li class="list-group-item">
-     
-   
-    <p class="list-group-item-text">
-   
-    
-    
-    <div class="form-group">
-  <label class="control-label" for="disabledInput">Date Of Birth</label>&nbsp;&nbsp;10/12/1992
-  
-</div>
-<div class="form-group">
-  <label class="control-label" for="disabledInput">Insurance Provider ID </label>&nbsp;&nbsp;12313213123
-  
-</div>
-<div class="form-group">
-  <label class="control-label" for="disabledInput">Insurance Provider Name</label>&nbsp;&nbsp;Aetna
-  
-</div>
-<div class="form-group">
-  <label class="control-label" for="disabledInput">Subscriber ID</label>&nbsp;&nbsp;10121992
-  
-</div>
-<div class="form-group">
-  <label class="control-label" for="disabledInput">Subscriber Name</label>&nbsp;&nbsp;Aadish Shah
-  
-</div>
-<div class="form-group">
-  <label class="control-label" for="disabledInput">Patient Name</label>&nbsp;&nbsp;xyz
-  
-</div>
-<div class="form-group">
-  <label class="control-label" for="disabledInput">Status</label>&nbsp;&nbsp;active
-  
-
-</div>
-
  
-        <button type="submit" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#insuranceModal">Edit</button>
-        <button type="reset" class="btn btn-default btn-sm">Delete</button>
-     
-    </li> 
-  </ul>
-  </div>
-  <div class="col-sm-6">
-  <ul class="list-group">
-    <li class="list-group-item">
-     
-   
-    <p class="list-group-item-text">
-   
-    
-    
-    <div class="form-group">
-  <label class="control-label" for="disabledInput">Date Of Birth</label>&nbsp;&nbsp;10/12/1992
+  <div id="myinsurances">
   
-</div>
-<div class="form-group">
-  <label class="control-label" for="disabledInput">Insurance Provider ID </label>&nbsp;&nbsp;12313213123
-  
-</div>
-<div class="form-group">
-  <label class="control-label" for="disabledInput">Insurance Provider Name</label>&nbsp;&nbsp;Aetna
-  
-</div>
-<div class="form-group">
-  <label class="control-label" for="disabledInput">Subscriber ID</label>&nbsp;&nbsp;10121992
-  
-</div>
-<div class="form-group">
-  <label class="control-label" for="disabledInput">Subscriber Name</label>&nbsp;&nbsp;Aadish Shah
-  
-</div>
-<div class="form-group">
-  <label class="control-label" for="disabledInput">Patient Name</label>&nbsp;&nbsp;xyz
-  
-</div>
-<div class="form-group">
-  <label class="control-label" for="disabledInput">Status</label>&nbsp;&nbsp;active
-  
-
-</div>
-
- 
-        <button type="submit" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#insuranceModal">Edit</button>
-        <button type="reset" class="btn btn-default btn-sm">Delete</button>
-     
-    </li> 
-  </ul>
   </div>
 </div>
 </div>
@@ -888,6 +814,7 @@
   
         </div>
 <%@include file="footer.html" %>
-
+ 
+  
 </body>
 </html>

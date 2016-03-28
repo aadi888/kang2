@@ -1,0 +1,19 @@
+
+
+[{
+    "appointmentRequestID": 1,
+    "patientID": 1,
+    "note": "cleaning teeth",
+    "requestInsertedTime": "02-25-2016 : 00:00",
+    "appointmentStartTime": "03-01-2016 : 00:00",
+    "status": "WAITING_FOR_APPROVAL",
+    "appointment": null
+}, {
+    "appointmentRequestID": 2,
+    "patientID": 1,
+    "note": "Extract teeth",
+    "requestInsertedTime": "03-01-2016 : 00:00",
+    "appointmentStartTime": "03-17-2016 : 00:00",
+    "status": "ACCEPTED",
+    "appointment": null
+}]

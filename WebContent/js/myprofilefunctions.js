@@ -32,6 +32,42 @@
      $("#Insurance").hide();
      $("#Payment").hide();
  $("#MyProfile").hide();
+ 
+ 
+
+ 
+ $.get("json/patient_sentmessages.json", function(data){
+	  
+	  
+	  $.each(data, function(key,val) {
+        
+		  var template = $('#sentMessageTemp').html();
+		  val.firstMessage=val.msg.substring(0,200);
+		  val.secondMessage=val.msg.substring(201);
+		    var html = Mustache.to_html(template, val);
+		    $('#sentmessages').append(html);
+	});
+	 
+	             
+	          });
+ 
+ $.get("json/patient_receivedmessages.json", function(data){
+	  
+	  
+	  $.each(data, function(key,val) {
+       
+		  var template = $('#receivedMessageTemp').html();
+		  val.firstMessage=val.msg.substring(0,200);
+		  val.secondMessage=val.msg.substring(201);
+		    var html = Mustache.to_html(template, val);
+		    $('#receivedmessages').append(html);
+	});
+	 
+	             
+	          });
+ 
+ 
+ 
  }
  function showAppointments()
  {
@@ -59,6 +95,20 @@
      $("#Insurance").show();
      $("#Payment").hide();
  $("#MyProfile").hide();
+ 
+ $.get("json/patient_insurances.json", function(data){
+	  
+	  
+	  $.each(data, function(key,val) {
+       
+		  var template = $('#insurancesTemp').html();
+		
+		    var html = Mustache.to_html(template, val);
+		    $('#myinsurances').append(html);
+	});
+	 
+	             
+	          });
  }
  function showContactForm()
  {

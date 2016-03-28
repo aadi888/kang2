@@ -10,6 +10,8 @@ $(document).ready(function(){
 	get("rest/patient/contact","c");
 	get("rest/patient/emergency","e");
 	
+	 
+	
 	
 
   

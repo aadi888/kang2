@@ -1,0 +1,13 @@
+
+
+[{
+    "messageID": 1,
+    "receiverID": 1,
+    "msg": "message message message messagemessage messagemessage messagemessage messagemessage messagemessage messagemessage messagemessage messagemessage messagemessage messagemessage messagemessage messagemessage messagemessage messagemessage messagemessage messagemessage messagemessage messagemessage messageFirst message",
+    "receivedTime": "02-10-2016 : 00:00"
+}, {
+    "messageID": 2,
+    "receiverID": 1,
+    "msg": "22222222222222222222222222222 message messagemessage messagemessage messagemessage messagemessage messagemessage messagemessage messagemessage messagemessage messagemessage messagemessage messagemessage messageSecond message",
+    "receivedTime": "03-01-2016 : 00:00"
+}]

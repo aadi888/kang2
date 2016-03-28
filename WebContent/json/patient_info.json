@@ -1,0 +1,208 @@
+
+
+{
+    "userID": 1,
+    "firstName": "Satyanandana",
+    "lastName": "Vadapalli",
+    "middleName": "Srikanthvarma",
+    "dateOfBirth": "03-01-1989",
+    "phoneNumber": "6178491980",
+    "email": "srikanthvarma.vadapalli@gmail.com",
+    "homeAddress": {
+        "address1": "30 Franklin street",
+        "address2": "unit 228",
+        "city": "Malden",
+        "state": "MA",
+        "zipcode": "01248"
+    },
+    "sentMessages": [{
+        "messageID": 1,
+        "senderID": 1,
+        "msg": "First message",
+        "sentTime": "02-10-2016 : 00:00"
+  }, {
+        "messageID": 2,
+        "senderID": 1,
+        "msg": "Second message",
+        "sentTime": "03-01-2016 : 00:00"
+  }],
+    "receivedMessages": [{
+        "messageID": 1,
+        "receiverID": 1,
+        "msg": "First message",
+        "receivedTime": "02-10-2016 : 00:00"
+  }, {
+        "messageID": 2,
+        "receiverID": 1,
+        "msg": "Second message",
+        "receivedTime": "03-01-2016 : 00:00"
+  }],
+    "treatments": [{
+        "treatmentID": 1,
+        "patientID": 1,
+        "teeth": {
+            "teethID": 1,
+            "teethName": "URCe",
+            "description": "Upper Right Central"
+        },
+        "note": "somethig done to teeth 1",
+        "treatmentInsertedTime": "03-02-2016 : 00:00",
+        "treatmentDoneTime": "03-15-2016",
+        "treatmentExpectedTime": "03-15-2016",
+        "amountPaid": 200.00,
+        "amountExpected": 180.00,
+        "status": "COMPLETED"
+  }, {
+        "treatmentID": 2,
+        "patientID": 1,
+        "teeth": {
+            "teethID": 1,
+            "teethName": "URCe",
+            "description": "Upper Right Central"
+        },
+        "note": "somethig to be done to teeth 1",
+        "treatmentInsertedTime": "03-22-2016 : 00:00",
+        "treatmentDoneTime": null,
+        "treatmentExpectedTime": "03-24-2016",
+        "amountPaid": null,
+        "amountExpected": 100.00,
+        "status": "PENDING"
+  }, {
+        "treatmentID": 3,
+        "patientID": 1,
+        "teeth": {
+            "teethID": 2,
+            "teethName": "URL",
+            "description": "Upper Right Lateral"
+        },
+        "note": "somethig done to teeth 2",
+        "treatmentInsertedTime": "03-02-2016 : 00:00",
+        "treatmentDoneTime": "03-15-2016",
+        "treatmentExpectedTime": "03-15-2016",
+        "amountPaid": 200.00,
+        "amountExpected": 180.00,
+        "status": "COMPLETED"
+  }, {
+        "treatmentID": 4,
+        "patientID": 1,
+        "teeth": {
+            "teethID": 2,
+            "teethName": "URL",
+            "description": "Upper Right Lateral"
+        },
+        "note": "somethig to be done to teeth 2",
+        "treatmentInsertedTime": "03-22-2016 : 00:00",
+        "treatmentDoneTime": null,
+        "treatmentExpectedTime": "03-24-2016",
+        "amountPaid": null,
+        "amountExpected": 100.00,
+        "status": "PENDING"
+  }],
+    "insurances": [{
+        "insuranceID": 1,
+        "patientID": 1,
+        "insuranceProviderID": "5864858467",
+        "insuranceProviderName": "Aetna",
+        "subscriberID": "5486665487",
+        "subscriberFullName": "SATYANANDANA SRIKANTHVARMA",
+        "dateOfBirth": null,
+        "status": "EXPIRED",
+        "insertedDate": "03-01-2015 : 00:00"
+  }, {
+        "insuranceID": 2,
+        "patientID": 1,
+        "insuranceProviderID": "5864855783",
+        "insuranceProviderName": "Blue Cross",
+        "subscriberID": "5486685739",
+        "subscriberFullName": "SATYANANDANA SRIKANTHVARMA",
+        "dateOfBirth": null,
+        "status": "ACTIVE",
+        "insertedDate": "03-01-2016 : 00:00"
+  }],
+    "appointmentRequests": [{
+        "appointmentRequestID": 1,
+        "patientID": 1,
+        "note": "cleaning teeth",
+        "requestInsertedTime": "02-25-2016 : 00:00",
+        "appointmentStartTime": "03-01-2016 : 00:00",
+        "status": "WAITING_FOR_APPROVAL",
+        "appointment": null
+  }, {
+        "appointmentRequestID": 2,
+        "patientID": 1,
+        "note": "Extract teeth",
+        "requestInsertedTime": "03-01-2016 : 00:00",
+        "appointmentStartTime": "03-17-2016 : 00:00",
+        "status": "ACCEPTED",
+        "appointment": null
+  }],
+    "appointments": [{
+        "appointmentID": 1,
+        "patientID": 1,
+        "appointmentInsertedTime": "03-02-2016 : 00:00",
+        "appointmentStartTime": "03-01-2016 : 00:00",
+        "fakeCalEventID": "yr73988",
+        "actualCalEventID": "fht789w76",
+        "note": "",
+        "expectedAmount": null,
+        "amountPaid": null,
+        "status": "CONFIRMED",
+        "appointmentRequest": {
+            "appointmentRequestID": 1,
+            "patientID": 1,
+            "note": "cleaning teeth",
+            "requestInsertedTime": "02-25-2016 : 00:00",
+            "appointmentStartTime": "03-01-2016 : 00:00",
+            "status": "WAITING_FOR_APPROVAL",
+            "appointment": null
+        }
+  }, {
+        "appointmentID": 2,
+        "patientID": 1,
+        "appointmentInsertedTime": "03-18-2016 : 00:00",
+        "appointmentStartTime": "03-17-2016 : 00:00",
+        "fakeCalEventID": "yr73988",
+        "actualCalEventID": "fhtuyiw76",
+        "note": "",
+        "expectedAmount": null,
+        "amountPaid": null,
+        "status": "CONFIRMED",
+        "appointmentRequest": {
+            "appointmentRequestID": 2,
+            "patientID": 1,
+            "note": "Extract teeth",
+            "requestInsertedTime": "03-01-2016 : 00:00",
+            "appointmentStartTime": "03-17-2016 : 00:00",
+            "status": "ACCEPTED",
+            "appointment": null
+        }
+  }],
+    "patientTeeth": [{
+        "teethStatus": "NORMAL",
+        "lastModified": "03-01-2016 : 00:00",
+        "teethStatusPK": {
+            "patientID": 1,
+            "teeth": {
+                "teethID": 1,
+                "teethName": "URCe",
+                "description": "Upper Right Central"
+            }
+        }
+  }, {
+        "teethStatus": "EXTRACTED",
+        "lastModified": "03-01-2016 : 00:00",
+        "teethStatusPK": {
+            "patientID": 1,
+            "teeth": {
+                "teethID": 2,
+                "teethName": "URL",
+                "description": "Upper Right Lateral"
+            }
+        }
+  }],
+    "emergencyContact": {
+        "name": "Hima Sindhu",
+        "phoneNumber": "6174895892",
+        "relation": "Sister"
+    }
+}
