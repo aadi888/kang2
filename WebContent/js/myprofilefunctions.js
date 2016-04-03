@@ -99,6 +99,7 @@
 	  $.each(data, function(key,val) {
        
 		  var template = $('#requestedAppointmentsTemp').html();
+		  
 		  val.counter=i;
 		  i++;
 		    var html = Mustache.to_html(template, val);
@@ -117,16 +118,33 @@
      $("#Payment").hide();
  $("#MyProfile").hide();
  
- $.get("json/patient_insurances.json", function(data){
-	 $('#treatmentsForTemp').empty();
-	  var i=1;
+ $.get("json/patient_patientteethstatus.json", function(data){
+	 $('#treatmentsForTemp1to16').empty();
+	 $('#treatmentsForTemp17to32').empty();
+	 
+	  
 	  $.each(data, function(key,val) {
-       
+		 
 		  var template = $('#requestedTreatmentsTemp').html();
-		  val.counter=i;
-		  i++;
-		    var html = Mustache.to_html(template, val);
-		    $('#treatmentsForTemp').append(html);
+		  
+		  var template12 = $('#requestedTreatmentsTemp12').html();
+		 
+		   data.counter=key;
+		   data.status=val;
+		     
+		    var html = Mustache.to_html(template, data);
+		    var html12 = Mustache.to_html(template12, data);
+		     if(key<=16)
+		    	 {
+		    	 
+		    	 
+		    	 $('#treatmentsForTemp1to16').append(html);
+		    	 }
+		     else
+		    	 {
+		    	 $('#treatmentsForTemp17to32').append(html12);
+		    	 
+		    	 }
 	});
 	 
 	             
@@ -243,3 +261,65 @@
      $("#Payment").show();
  $("#MyProfile").hide();
  }
+
+ 
+
+ function showMyTeethDetails(id)
+ {
+	 
+	 $.get(null, function(data){
+		  data={"TeethNumber": id, "TeethName": "wisdon teeth", "Description": "gone thorugh root canal therapy","Treatments": [{
+			    "appointmentRequestID": 1,
+			    "patientID": 1,
+			    "note": "cleaning teeth",
+			    "requestInsertedTime": "02-25-2016 : 00:00",
+			    "appointmentStartTime": "03-01-2016 : 00:00",
+			    "status": "PENDING",
+			    "appointment": null
+			}, 
+			{
+			    "appointmentRequestID": 3,
+			    "patientID": 1,
+			    "note": "cleaning teeth",
+			    "requestInsertedTime": "02-25-2016 : 00:00",
+			    "appointmentStartTime": "03-01-2016 : 00:00",
+			    "status": "ACCEPTED",
+			    "appointment": null
+			},{
+			    "appointmentRequestID": 2,
+			    "patientID": 1,
+			    "note": "Extract teeth",
+			    "requestInsertedTime": "03-01-2016 : 00:00",
+			    "appointmentStartTime": "03-17-2016 : 00:00",
+			    "status": "ACCEPTED",
+			    "appointment": null
+			}] };
+		 $('#teethDetails').empty();
+		  
+	       
+			  var template = $('#teethDetailsTemp').html();
+			  
+			    var html = Mustache.to_html(template, data);
+			    $('#teethDetails').append(html);
+			    $.each(data.Treatments, function(key,val) {
+			        
+					  var template = $('#teethDetailsTreatmentTemp').html();
+					
+					    var html = Mustache.to_html(template, val);
+					    $('#teethDetails').append(html);
+					    
+				});
+			    var template12 = $('#teethNewTreatmentTemp').html();
+			    var html = Mustache.to_html(template12, null);
+			    $('#teethDetails').append(html);
+			    
+			    
+		
+	 });
+	 
+	
+	 
+	
+ 
+ }
+

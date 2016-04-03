@@ -15,6 +15,7 @@
 <script type="text/javascript" src="js/myprofilefunctions.js"></script>
  <script type="text/javascript" src="js/myprofileready.js"></script>
  <script type="text/javascript" src="js/ajax.js"></script>
+ <script type="text/javascript" src="js/changestatus.js"></script>
  
  
  <%@include file="template.jsp" %>
@@ -36,9 +37,8 @@
 
 
 <%@include file="dynamicheader.html" %>
-<div class="container">
 
-  	
+  	<div class="container" style="height: 75%;width: 95%;">
   
 <br/>
     <h1>My Dash Board</h1>
@@ -407,10 +407,30 @@
 <div class="list-group">
   
    <h2> <i class="fa fa-check"></i> Confirmed </h2><br/> 
-  <div id="appointmentsForTemp">
+   <table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Appointment Start Time</th>
+      <th>Note</th>
+      <th>Expected Amount</th>
+      <th>Amount Paid</th>
+      <th>Status</th>
+      <th>Change Status</th>
+    </tr>
+  </thead>
   
-  </div>
   
+   
+   
+   
+
+  
+
+<tbody id="appointmentsForTemp">
+
+  </tbody>
+  </table>
   
   
   
@@ -421,10 +441,23 @@
   
    <h2> <i class="fa fa-exclamation-triangle"></i> Requested Appointments <a href="events.jsp" style="float: right;"><i class="fa fa-plus-circle"  >Schedule New</i></a></h2><br/> 
 
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Appointment Start Time</th>
+      <th>Note</th> 
+      <th>Status</th>
+ 	  <th>Change Status</th>
+    </tr>
+  </thead>
+
+<tbody id="requestedAppointmentsForTemp">
    
-  <div id="requestedAppointmentsForTemp"></div>
   
- 
+  
+ </tbody>
+ </table>
  
   
   
@@ -444,10 +477,51 @@
   
    <h2> <i class="fa fa-gavel"></i> My Treatments </h2><br/> 
  
-   <div id="treatmentsForTemp">
-  
-     </div>
+  <div>
+   <table>
    
+   <tbody >
+   
+   <tr id="treatmentsForTemp1to16">
+   </tr>
+   <tr><td></br></td></tr>
+   <tr id="treatmentsForTemp17to32">
+   </tr>
+  
+  
+ </tbody>
+ </table>
+   </div>
+   <br/>
+   <br/>
+   
+   <div class="col-sm-12" style="background-color: white;margin-bottom: 20px;">
+				
+<div class="list-group">
+  
+   <h2 style="float: left;"> <i class="flaticon-icon-91156"></i>Teeth Details</h2><br/> 
+  
+  <table class="table" align="center">
+  <thead>
+    <tr>
+      <th>Teeth Number</th>
+      <th>Teeth Name</th>
+      <th>Description</th>
+      <th>Treatments</th>
+     
+     
+    </tr>
+  </thead>
+  
+  <tbody >
+    <tr id="teethDetails">
+    
+    </tr>
+   </tbody>
+  </table>
+  
+</div>
+</div>
 </div>
 </div>
 
@@ -652,8 +726,69 @@
       
     </div>
       </div>
-  
+      
+      
+      
+          <!-- Modal new treatment -->
+  <div class="modal fade" id="treatmentModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Add New Treatment</h4>
         </div>
+        <div class="modal-body">
+        <div class="form-group">
+  <label class="control-label" for="disabledInput">Treatment Done Time</label>
+  <input class="form-control" id="disabledInput" type="number" placeholder="mm/dd/yyyy" >
+</div>
+<div class="form-group">
+      <label for="select">Treatment Status</label>
+      <div>
+        <select class="form-control" id="select">
+          <option selected="selected">Completed</option>
+          <option>Pending</option>
+        
+        </select>
+        
+      </div>
+    </div>  
+    <div class="modal-body">
+          <div class="form-group">
+          <label for="select">Note</label>
+      
+      <div>
+        <textarea class="form-control" rows="3" id="textArea" placeholder="type your note here.." maxlength="255"></textarea>
+        <span class="help-block">Maximum 255 characters.</span>
+      </div>
+    </div>
+        </div>
+       
+<div class="form-group">
+ <label class="control-label" for="disabledInput">Amount Paid</label>
+  <input class="form-control" id="disabledInput" type="text" placeholder="920329309209309" >
+</div>
+<div class="form-group">
+ <label class="control-label" for="disabledInput">Amount Expected</label>
+  <input class="form-control" id="disabledInput" type="text" placeholder="xyz" >
+</div>
+
+      
+
+    
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" >Add</button>
+        </div>
+      </div>
+      
+    </div>
+      </div>
+  </div>
+        
 <%@include file="footer.html" %>
  
   

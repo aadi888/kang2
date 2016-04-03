@@ -3,7 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-
+<link rel="stylesheet" href="css/font/flaticonteeth12.css">
 <script type="text/template" id="sentMessageTemp">
 
   <li class="list-group-item"><p class="list-group-item-text">{{firstMessage}}<a class="read-more-show hide" href="#">Read More</a> <span class="read-more-content">{{secondMessage}} <a class="read-more-hide hide" href="#">Read Less</a></span></p><p><small style="float: right;">{{sentTime}}</small></p></li>
@@ -71,27 +71,7 @@
 
 </script>
 <script type="text/template" id="appointmentsTemp">
-<table class="table">
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>Appointment Start Time</th>
-      <th>Note</th>
-      <th>Expected Amount</th>
-      <th>Amount Paid</th>
-      <th>Status</th>
-      <th></th>
-    </tr>
-  </thead>
-  
-  
-   
-   
-   
 
-  
-
-<tbody>
     <tr>
       <td>{{counter}}</td>
       <td>{{appointmentStartTime}}</td>
@@ -102,95 +82,77 @@
 
 
 
-    <a  class="btn btn-info btn-sm" >{{status}}</a>
+    {{status}}
 
 
 
   
   
          </td>
-         <td><a href="#"><i class="fa fa-times" style="font-size: 30px;color: red;"></i></a></td>
+         <td><select id="appointmentsStatusChange" onChange="postAppointmentStatus({{appointmentID}},this.value)"><option value="COMPLETED">Completed</option><option value="CONFIRMED">Confirmed</option><option value="CANCEL">Cancel</option></select></td>
     </tr>
-   </tbody>
-
-
-</table>
+  
 </script>
 
 <script type="text/template" id="requestedAppointmentsTemp">
-<table class="table">
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>Appointment Start Time</th>
-      <th>Note</th>
-     
-      <th>Status</th>
- 	  <th></th>
-    </tr>
-  </thead>
 
-<tbody>
  
 
     <tr >
       <td>{{counter}}</td>
       <td>{{appointmentStartTime}}</td>
-       <td>{{note}}</td>
-      <td>
-  <a  class="btn btn-warning btn-sm">{{status}}</a>
-  
-         </td>
-         <td><a href="#"><i class="fa fa-times" style="font-size: 30px;color: red;"></i></a></td>
+      <td>{{note}}</td>
+      <td>{{status}}</td>
+      <td><select id="appointmentsRequesedStatusChange" onChange="postRequestedAppointmentStatus({{appointmentRequestID}},this.value)"><option value="COMPLETED">Completed</option><option value="CONFIRMED">Confirmed</option><option value="CANCEL">Cancel</option></select></td>
       
      
     </tr>
-     </tbody>
 
-</table>
 
    
 </script>
 
 <script type="text/template" id="requestedTreatmentsTemp">
- <div class="col-sm-6">
-  <ul class="list-group">
-    <li class="list-group-item">
+
      
+<td align="center">
+<p style="margin-left: 40px;">{{counter}}</p> 
+<i class="flaticon-icon-{{status}}" style="color:#2c3e50;" id="" onclick="showMyTeethDetails({{counter}})" data-toggle="tooltip" title="{{status}}"></i><span class="tab"></span>  
+</td>
    
-    <p class="list-group-item-text">
+     
+</script>
+
+<script type="text/template" id="requestedTreatmentsTemp12">
+
+     
+<td align="center">
+
+<i class="flaticon-icon-{{status}}" style="color:#2c3e50;" id="" onclick="showMyTeethDetails({{counter}})" data-toggle="tooltip" title="{{status}}" ></i><span class="tab"></span>  
+<p style="margin-left: 40px;">{{counter}}</p> 
+</td>
    
- <form action="teeth.jsp">
-    <div class="form-group">
-  <label class="control-label" for="disabledInput">Patient Name</label>&nbsp;&nbsp;{{insuranceProviderName}}
-  
-</div>
-    
-    <div class="form-group">
-  <label class="control-label" for="disabledInput">Treatment Date</label>&nbsp;&nbsp;{{insuranceProviderName}}
-  
-</div>
-<div class="form-group">
-  <label class="control-label" for="disabledInput">Treatment Expected Time </label>&nbsp;&nbsp;{{insuranceProviderName}}
-  
-</div>
+     
+</script>
 
-<div class="form-group">
-  <label class="control-label" for="disabledInput">Treatment note</label>&nbsp;&nbsp;{{insuranceProviderName}}
-  
-</div>
-<div class="form-group">
-  <label class="control-label" for="disabledInput">Treatment Status</label>&nbsp;&nbsp;{{insuranceProviderName}}
-  
-</div>
+<script type="text/template" id="teethDetailsTemp">
 
-<button type="submit" class="btn btn-primary btn-sm" >Show Me My Treatment</button>
-       
-     </form>
+      <td> {{TeethNumber}}</td>
+      <td>{{TeethName}}</td>
+      <td>{{Description}}</td>
 
-    </li> 
-  </ul>
-  </div>
+
+</script>
+<script type="text/template" id="teethDetailsTreatmentTemp">
+<td>
+<a  class="btn btn-primary btn-xs">{{note}}<i class="fa fa-times" onclick=alert("delete");></i></a>
+</td>
+</script>
+<script type="text/template" id="teethNewTreatmentTemp">
+<td>
+<a href="#" class="btn btn-success btn-xs" data-toggle="modal" data-target="#treatmentModal">Add New Treatment <i class="fa fa-plus-circle" ></i></a>
+
+</td>
 </script>
 </head>
 
