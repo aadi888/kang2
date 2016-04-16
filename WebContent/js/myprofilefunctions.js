@@ -269,33 +269,33 @@
 	 
 	 $.get(null, function(data){
 		  data={"TeethNumber": id, "TeethName": "wisdon teeth", "Description": "gone thorugh root canal therapy","Treatments": [{
-			    "appointmentRequestID": 1,
-			    "patientID": 1,
-			    "note": "cleaning teeth",
-			    "requestInsertedTime": "02-25-2016 : 00:00",
+			    "b": 1,
+			    "a": 1,
+			    "note": "cleaning teeth xxx",
+			    "appointmenttime": "02-25-2016 : 00:00",
 			    "appointmentStartTime": "03-01-2016 : 00:00",
 			    "status": "PENDING",
-			    "appointment": null
+			    "amountpaid": "200",
+			    "amountexpected": "100"
 			}, 
 			{
-			    "appointmentRequestID": 3,
-			    "patientID": 1,
-			    "note": "cleaning teeth",
-			    "requestInsertedTime": "02-25-2016 : 00:00",
+				"note": "cleaning teeth yyy  ",
+			    "appointmenttime": "02-25-2016 : 00:00",
 			    "appointmentStartTime": "03-01-2016 : 00:00",
-			    "status": "ACCEPTED",
-			    "appointment": null
+			    "status": "PENDING",
+			    "amountpaid": "200",
+			    "amountexpected": "100"
 			},{
-			    "appointmentRequestID": 2,
-			    "patientID": 1,
-			    "note": "Extract teeth",
-			    "requestInsertedTime": "03-01-2016 : 00:00",
-			    "appointmentStartTime": "03-17-2016 : 00:00",
-			    "status": "ACCEPTED",
-			    "appointment": null
+				"note": "cleaning teeth zzz",
+			    "appointmenttime": "02-25-2016 : 00:00",
+			    "appointmentStartTime": "03-01-2016 : 00:00",
+			    "status": "PENDING",
+			    "amountpaid": "200",
+			    "amountexpected": "100"
 			}] };
 		 $('#teethDetails').empty();
-		  
+		 
+		 $('#teethTreatmentDetails').empty();
 	       
 			  var template = $('#teethDetailsTemp').html();
 			  
@@ -306,7 +306,7 @@
 					  var template = $('#teethDetailsTreatmentTemp').html();
 					
 					    var html = Mustache.to_html(template, val);
-					    $('#teethDetails').append(html);
+					    $('#teethTreatmentDetails').append(html);
 					    
 				});
 			    var template12 = $('#teethNewTreatmentTemp').html();
@@ -321,5 +321,19 @@
 	 
 	
  
+ }
+ 
+ function statusChanged()
+ {
+	  
+	  if($('#selectStatus').val()=="Completed")
+		  {
+		  $('#statusModal').modal('hide');
+		    $('#appendStatusCompleted').modal('show');
+		  }
+	  else
+		  {
+		    alert("send post request ..");
+		  }
  }
 

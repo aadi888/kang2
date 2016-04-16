@@ -89,8 +89,10 @@
   
   
          </td>
-         <td><select id="appointmentsStatusChange" onChange="postAppointmentStatus({{appointmentID}},this.value)"><option value="COMPLETED">Completed</option><option value="CONFIRMED">Confirmed</option><option value="CANCEL">Cancel</option></select></td>
-    </tr>
+<td>
+  <button  class="btn btn-primary btn-xs" id="appointmentsStatusChange" onclick="postAppointmentStatus({{appointmentID}},this.value)" data-toggle="modal" data-target="#statusModal">Change Status</button>
+  
+</td>
   
 </script>
 
@@ -103,8 +105,12 @@
       <td>{{appointmentStartTime}}</td>
       <td>{{note}}</td>
       <td>{{status}}</td>
-      <td><select id="appointmentsRequesedStatusChange" onChange="postRequestedAppointmentStatus({{appointmentRequestID}},this.value)"><option value="COMPLETED">Completed</option><option value="CONFIRMED">Confirmed</option><option value="CANCEL">Cancel</option></select></td>
+     
       
+<td>
+  <button  class="btn btn-primary btn-xs" id="appointmentsRequesedStatusChange" onclick="postRequestedAppointmentStatus({{appointmentRequestID}},this.value)" data-toggle="modal" data-target="#statusModal">Change Status</button>
+  
+</td>
      
     </tr>
 
@@ -144,9 +150,20 @@
 
 </script>
 <script type="text/template" id="teethDetailsTreatmentTemp">
+<tr>
 <td>
-<a  class="btn btn-primary btn-xs">{{note}}<i class="fa fa-times" onclick=alert("delete");></i></a>
+{{status}}
 </td>
+<td>
+{{note}}
+</td>
+<td>
+{{appointmentStartTime}}
+</td>
+<td>
+{{amountexpected}}
+</td>
+</tr>
 </script>
 <script type="text/template" id="teethNewTreatmentTemp">
 <td>

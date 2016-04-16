@@ -416,7 +416,7 @@
       <th>Expected Amount</th>
       <th>Amount Paid</th>
       <th>Status</th>
-      <th>Change Status</th>
+      <th></th>
     </tr>
   </thead>
   
@@ -507,7 +507,7 @@
       <th>Teeth Number</th>
       <th>Teeth Name</th>
       <th>Description</th>
-      <th>Treatments</th>
+   
      
      
     </tr>
@@ -517,6 +517,33 @@
     <tr id="teethDetails">
     
     </tr>
+   </tbody>
+  </table>
+  
+</div>
+</div>
+<div class="col-sm-12" style="background-color: white;margin-bottom: 20px;">
+				
+<div class="list-group">
+  
+   <h2 style="float: left;"> <i class="flaticon-medical-23"></i>Treatment Details</h2><br/> 
+  
+  <table class="table" align="center">
+  <thead>
+    <tr>
+      <th>Status</th>
+      <th>Note</th>
+      <th>Treatment Time</th>
+      <th>Amount Paid</th>
+      
+   
+     
+     
+    </tr>
+  </thead>
+  
+  <tbody id="teethTreatmentDetails">
+   
    </tbody>
   </table>
   
@@ -787,6 +814,84 @@
       
     </div>
       </div>
+      
+      
+      
+      <!-- Modal Change Status -->
+  <div class="modal fade" id="statusModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Change Your Status</h4>
+        </div>
+        <div class="modal-body" id="statusCompleted">
+        
+<div class="form-group">
+      <label for="select">Treatment Status</label>
+      <div>
+        <select class="form-control" id="selectStatus" onchange=statusChanged();>
+          <option value="Completed">Completed</option>
+          <option value="Confirmed">Confirmed</option>
+          <option value="Canceled">Canceled</option>
+          
+          <option>Pending</option>
+        
+        </select>
+        
+      </div>
+    </div>  
+    
+       
+
+
+      
+
+    
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" >Update</button>
+        </div>
+      </div>
+      
+    </div>
+      </div>
+  </div>
+  
+ 
+  
+  
+    <!-- Modal new status for completed -->
+  <div class="modal fade" id="appendStatusCompleted" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Please Provide Some More Information !</h4>
+        </div>
+        <div class="modal-body">
+          
+  <div class="form-group">
+ <label class="control-label" for="disabledInput">Amount Paid</label>
+  <input class="form-control" id="disabledInput" type="text" placeholder="200.0" >
+</div>
+<div class="form-group">
+ <label class="control-label" for="disabledInput">Amount Expected</label>
+  <input class="form-control" id="disabledInput" type="text" placeholder="300.0" >
+</div>
+         
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" >Send</button>
+        </div>
+      </div>
+      
+    </div>
   </div>
         
 <%@include file="footer.html" %>

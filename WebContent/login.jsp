@@ -76,9 +76,10 @@
   </head>
   <body>
     <div class="navbar navbar-default navbar-fixed-top">
+    <img src="img/logo_1.gif" height="70" width="180" style="float: left;" ></img>
       <div class="container">
         <div class="navbar-header">
-          <a href="home.jsp" class="navbar-brand"><i class="glyphicon glyphicon-briefcase"></i>  Kang's Clinic</a>
+          <a href="home.jsp" class="navbar-brand">Dr Kang's Dental Clinic</a>
           <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -168,6 +169,7 @@
  
  <div id="login">
  <h2><span class="glyphicon glyphicon-user"></span>Login</h2>
+ 
   <div class="form-group">
 			    <label for="email">Username</label>
 			    <input type="text" class="form-control" id="email" name="email" placeholder="Enter username" value="" >
