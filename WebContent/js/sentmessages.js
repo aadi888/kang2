@@ -34,8 +34,27 @@ var sentmessages = (function() {
             displayMessages(messagesData);
         });
     }
+    
+    var sendMessage = function(path) {
+    	 
+    	alert("not working..");
+    	
+    	
+    	
+    	
+    	
+      /*  $.ajax({
+            url: path,
+            method: 'POST'
+        }).then(function(data) {
+            messagesData = data;
+            displayMessages(messagesData);
+        });*/
+    }
     return {
         getMessages: getMessages,
-        displayMessages: displayMessages
+        displayMessages: displayMessages,
+        sendMessage: sendMessage
+        
     };
 }());

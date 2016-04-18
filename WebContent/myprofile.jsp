@@ -688,15 +688,17 @@
         </div>
         <div class="modal-body">
           <div class="form-group">
-      
+      <form id="sendMessage1" name="sendMessage1" class="sendMessage1">
       <div>
-        <textarea class="form-control" rows="3" id="textArea" placeholder="type your message here.." maxlength="255"></textarea>
+      
+        <textarea class="form-control" rows="3" id="textArea" name="textArea" placeholder="type your message here.." maxlength="255"></textarea>
         <span class="help-block">Maximum 255 characters.</span>
       </div>
+      </form>
     </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary" >Send</button>
+          <button type="button" class="btn btn-primary" onclick="sentmessages.sendMessage('json/patient_insurances.json')" >Send</button>
         </div>
       </div>
       
