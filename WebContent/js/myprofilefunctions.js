@@ -33,44 +33,14 @@
      $("#Payment").hide();
  $("#MyProfile").hide();
  
- 
 
- 
- $.get("json/patient_sentmessages.json", function(data){
-	  
-	 $('#sentmessages').empty();
-	  $.each(data, function(key,val) {
-        
-		  var template = $('#sentMessageTemp').html();
-		  val.firstMessage=val.msg.substring(0,200);
-		  val.secondMessage=val.msg.substring(201);
-		    var html = Mustache.to_html(template, val);
-		    $('#sentmessages').append(html);
-	});
-	 
-	             
-	          });
- 
- $.get("json/patient_receivedmessages.json", function(data){
-	  
-	 $('#receivedmessages').empty();
-	  $.each(data, function(key,val) {
-       
-		  var template = $('#receivedMessageTemp').html();
-		  val.firstMessage=val.msg.substring(0,200);
-		  val.secondMessage=val.msg.substring(201);
-		    var html = Mustache.to_html(template, val);
-		    $('#receivedmessages').append(html);
-	});
-	 
-	             
-	          });
- 
- 
- 
+ sentmessages.getMessages("json/patient_sentmessages.json");
+receivedmessages.getMessages("json/patient_receivedmessages.json"); 
  }
  function showAppointments()
  {
+	 
+	 
 	 $("#Messages").hide();
      $("#Appointments").show();
      $("#Treatments").hide();
@@ -78,36 +48,11 @@
      $("#Payment").hide();
  $("#MyProfile").hide();
  
- $.get("json/patient_appointments.json", function(data){
-	 $('#appointmentsForTemp').empty();
-	  var i=1;
-	  $.each(data, function(key,val) {
-       
-		  var template = $('#appointmentsTemp').html();
-		  val.counter=i;
-		  i++;
-		    var html = Mustache.to_html(template, val);
-		    $('#appointmentsForTemp').append(html);
-	});
-	 
-	             
-	          });
+ confirmedappointments.getAppointments("json/patient_appointments.json");
  
- $.get("json/patient_appointmentrequests.json", function(data){
-	 $('#requestedAppointmentsForTemp').empty();
-	  var i=1;
-	  $.each(data, function(key,val) {
-       
-		  var template = $('#requestedAppointmentsTemp').html();
-		  
-		  val.counter=i;
-		  i++;
-		    var html = Mustache.to_html(template, val);
-		    $('#requestedAppointmentsForTemp').append(html);
-	});
-	 
-	             
-	          });
+ requestedappointments.getAppointments("json/patient_appointmentrequests.json"); 
+
+
  }
  function showTreatments()
  {
@@ -118,37 +63,12 @@
      $("#Payment").hide();
  $("#MyProfile").hide();
  
- $.get("json/patient_patientteethstatus.json", function(data){
-	 $('#treatmentsForTemp1to16').empty();
-	 $('#treatmentsForTemp17to32').empty();
-	 
-	  
-	  $.each(data, function(key,val) {
-		 
-		  var template = $('#requestedTreatmentsTemp').html();
-		  
-		  var template12 = $('#requestedTreatmentsTemp12').html();
-		 
-		   data.counter=key;
-		   data.status=val;
-		     
-		    var html = Mustache.to_html(template, data);
-		    var html12 = Mustache.to_html(template12, data);
-		     if(key<=16)
-		    	 {
-		    	 
-		    	 
-		    	 $('#treatmentsForTemp1to16').append(html);
-		    	 }
-		     else
-		    	 {
-		    	 $('#treatmentsForTemp17to32').append(html12);
-		    	 
-		    	 }
-	});
-	 
-	             
-	          });
+ 
+
+ treatments.getTreatments("json/patient_patientteethstatus.json");
+ $("#teethTreatment").hide();
+ 
+
  }
  function showInsurance()
  {
@@ -159,19 +79,9 @@
      $("#Payment").hide();
  $("#MyProfile").hide();
  
- $.get("json/patient_insurances.json", function(data){
-	  
-	 $('#myinsurances').empty();
-	  $.each(data, function(key,val) {
-       
-		  var template = $('#insurancesTemp').html();
-		
-		    var html = Mustache.to_html(template, val);
-		    $('#myinsurances').append(html);
-	});
-	 
-	             
-	          });
+ insurances.getInsurances("json/patient_insurances.json");
+ 
+
  }
  function showContactForm()
  {
@@ -266,7 +176,7 @@
 
  function showMyTeethDetails(id)
  {
-	 
+	 $("#teethTreatment").show();
 	 $.get(null, function(data){
 		  data={"TeethNumber": id, "TeethName": "wisdon teeth", "Description": "gone thorugh root canal therapy","Treatments": [{
 			    "b": 1,

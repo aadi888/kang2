@@ -16,6 +16,12 @@
  <script type="text/javascript" src="js/myprofileready.js"></script>
  <script type="text/javascript" src="js/ajax.js"></script>
  <script type="text/javascript" src="js/changestatus.js"></script>
+ <script type="text/javascript" src="js/sentmessages.js"></script>
+ <script type="text/javascript" src="js/receivedmessages.js"></script>
+ <script type="text/javascript" src="js/confirmedappointments.js"></script>
+ <script type="text/javascript" src="js/requestedappointments.js"></script>
+ <script type="text/javascript" src="js/treatments.js"></script>
+ <script type="text/javascript" src="js/insurances.js"></script>
  
  
  <%@include file="template.jsp" %>
@@ -494,9 +500,10 @@
    </div>
    <br/>
    <br/>
+   <div id="teethTreatment">
    
    <div class="col-sm-12" style="background-color: white;margin-bottom: 20px;">
-				
+   				
 <div class="list-group">
   
    <h2 style="float: left;"> <i class="flaticon-icon-91156"></i>Teeth Details</h2><br/> 
@@ -547,6 +554,7 @@
    </tbody>
   </table>
   
+</div>
 </div>
 </div>
 </div>
