@@ -1,0 +1,21 @@
+{
+  "dateOfBirth" : "03-01-1989",
+  "middleName" : "Srikanthvarma",
+  "lastName" : "Vadapalli",
+  "userID" : 1,
+  "phoneNumber" : "6178491980",
+  "email" : "srikanthvarma.vadapalli@gmail.com",
+  "homeAddress" : {
+    "address1" : "30 Franklin street",
+    "address2" : "unit 228",
+    "city" : "Malden",
+    "state" : "MA",
+    "zipcode" : "01248"
+  },
+  "firstName" : "Satyanandana",
+  "EmergencyContact" : {
+    "name" : "Hima Sindhu",
+    "phoneNumber" : "6174895892",
+    "relation" : "Sister"
+  }
+}

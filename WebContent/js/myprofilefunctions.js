@@ -176,62 +176,16 @@ receivedmessages.getMessages("json/patient_receivedmessages.json");
 
  function showMyTeethDetails(id)
  {
-	 $("#teethTreatment").show();
-	 $.get(null, function(data){
-		  data={"TeethNumber": id, "TeethName": "wisdon teeth", "Description": "gone thorugh root canal therapy","Treatments": [{
-			    "b": 1,
-			    "a": 1,
-			    "note": "cleaning teeth xxx",
-			    "appointmenttime": "02-25-2016 : 00:00",
-			    "appointmentStartTime": "03-01-2016 : 00:00",
-			    "status": "PENDING",
-			    "amountpaid": "200",
-			    "amountexpected": "100"
-			}, 
-			{
-				"note": "cleaning teeth yyy  ",
-			    "appointmenttime": "02-25-2016 : 00:00",
-			    "appointmentStartTime": "03-01-2016 : 00:00",
-			    "status": "PENDING",
-			    "amountpaid": "200",
-			    "amountexpected": "100"
-			},{
-				"note": "cleaning teeth zzz",
-			    "appointmenttime": "02-25-2016 : 00:00",
-			    "appointmentStartTime": "03-01-2016 : 00:00",
-			    "status": "PENDING",
-			    "amountpaid": "200",
-			    "amountexpected": "100"
-			}] };
-		 $('#teethDetails').empty();
-		 
-		 $('#teethTreatmentDetails').empty();
-	       
-			  var template = $('#teethDetailsTemp').html();
-			  
-			    var html = Mustache.to_html(template, data);
-			    $('#teethDetails').append(html);
-			    $.each(data.Treatments, function(key,val) {
-			        
-					  var template = $('#teethDetailsTreatmentTemp').html();
-					
-					    var html = Mustache.to_html(template, val);
-					    $('#teethTreatmentDetails').append(html);
-					    
-				});
-			    var template12 = $('#teethNewTreatmentTemp').html();
-			    var html = Mustache.to_html(template12, null);
-			    $('#teethDetails').append(html);
-			    
-			    
-		
-	 });
 	 
+	 teethTreatments.getTreatmentsForTeeth("json/patient_patienttreatmentforteeth.json"); 
+	 
+	
 	
 	 
 	
  
  }
+ 
  
  function statusChanged()
  {
@@ -245,5 +199,12 @@ receivedmessages.getMessages("json/patient_receivedmessages.json");
 		  {
 		    alert("send post request ..");
 		  }
+ }
+ 
+ function addNewTreatmentOnTeeth(teethId)
+ {
+	  alert("we have teethId , Go and add treatment for that teeth" +teethId);
+	  $('#treatmentModal').modal('show');
+	  
  }
 

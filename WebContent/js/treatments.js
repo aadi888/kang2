@@ -17,8 +17,12 @@ var treatments = (function() {
         	 $('#treatmentsForTemp1to16').empty();
         	 $('#treatmentsForTemp17to32').empty();
         	 
+        	 $('#totalPrice').empty();
+        	 
+        	 
+        	 $('#totalPrice').append("<i class='fa fa-usd' aria-hidden='true'></i>"+data.total);
         	  
-        	  $.each(data, function(key,val) {
+        	  $.each(data.teethStatus, function(key,val) {
         		 
         		  var template = $('#requestedTreatmentsTemp').html();
         		  

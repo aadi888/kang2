@@ -1,10 +1,10 @@
 /**
  * 
  */
-function postAppointmentStatus(id,value)
+function postAppointmentStatus(id,patientId,value)
 {
 	
-		  alert("you haven't gave URL on changestatus.js function postStatus" + id +  value);
+		  alert("you haven't gave URL on changestatus.js function postStatus" + id+"Patient ID is" +  patientId);
 		  $.post(url,
 				  {"id":id ,"value":value},
 				  
@@ -20,12 +20,12 @@ function postAppointmentStatus(id,value)
 		  
 }
 
-function postRequestedAppointmentStatus(id,value)
+function postRequestedAppointmentStatus(appointmentId,patientId,value)
 {
 	
-		  alert("you haven't gave URL on changestatus.js function postStatus" + id +  value);
+		  alert("you haven't gave URL on changestatus.js function postStatus" + appointmentId + "Patient ID is " +patientId +"Value " +  value);
 		  $.post(url,
-				  {"id":id ,"value":value},
+				  {"appointmentId":appointmentId ,"value":value},
 				  
 				  function(data){
 		    		

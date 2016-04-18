@@ -1,34 +1,24 @@
 
 
-[{
-    "insuranceID": 1,
-    "patientID": 1,
-    "insuranceProviderID": "5864858467",
-    "insuranceProviderName": "Aetna",
-    "subscriberID": "5486665487",
-    "subscriberFullName": "SATYANANDANA SRIKANTHVARMA",
-    "dateOfBirth": null,
-    "status": "EXPIRED",
-    "insertedDate": "03-01-2015 : 00:00"
-}, 
-{
-    "insuranceID": 3,
-    "patientID": 1,
-    "insuranceProviderID": "5864858467",
-    "insuranceProviderName": "Aetna",
-    "subscriberID": "5486665487",
-    "subscriberFullName": "SATYANANDANA SRIKANTHVARMA",
-    "dateOfBirth": null,
-    "status": "EXPIRED",
-    "insertedDate": "03-01-2015 : 00:00"
-},{
-    "insuranceID": 2,
-    "patientID": 1,
-    "insuranceProviderID": "5864855783",
-    "insuranceProviderName": "Blue Cross",
-    "subscriberID": "5486685739",
-    "subscriberFullName": "SATYANANDANA SRIKANTHVARMA",
-    "dateOfBirth": null,
-    "status": "ACTIVE",
-    "insertedDate": "03-01-2016 : 00:00"
-}]
+
+[ {
+  "insuranceID" : 1,
+  "patientID" : 1,
+  "insuranceProviderID" : "5864858467",
+  "insuranceProviderName" : "Aetna",
+  "subscriberID" : "5486665487",
+  "subscriberFullName" : "SATYANANDANA SRIKANTHVARMA",
+  "dateOfBirth" : null,
+  "status" : "EXPIRED",
+  "insertedDate" : "03-01-2015 : 00:00"
+}, {
+  "insuranceID" : 2,
+  "patientID" : 1,
+  "insuranceProviderID" : "5864855783",
+  "insuranceProviderName" : "Blue Cross",
+  "subscriberID" : "5486685739",
+  "subscriberFullName" : "SATYANANDANA SRIKANTHVARMA",
+  "dateOfBirth" : null,
+  "status" : "ACTIVE",
+  "insertedDate" : "03-01-2016 : 00:00"
+} ]

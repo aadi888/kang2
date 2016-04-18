@@ -1,0 +1,43 @@
+{  
+   "total":200.00,
+   "color":"Red",
+   "teeth":{  
+      "teethID":1,
+      "teethName":"URCe",
+      "description":"Upper Right Central"
+   },
+   "treatments":[  
+      {  
+         "treatmentID":1,
+         "patientID":1,
+         "teeth":{  
+            "teethID":1,
+            "teethName":"URCe",
+            "description":"Upper Right Central"
+         },
+         "note":"somethig done to teeth 1",
+         "treatmentInsertedTime":"03-02-2016 : 00:00",
+         "treatmentDoneTime":"03-15-2016",
+         "treatmentExpectedTime":"03-15-2016",
+         "amountPaid":200.00,
+         "amountExpected":180.00,
+         "status":"COMPLETED"
+      },
+      {  
+         "treatmentID":2,
+         "patientID":1,
+         "teeth":{  
+            "teethID":1,
+            "teethName":"URCe",
+            "description":"Upper Right Central"
+         },
+         "note":"somethig to be done to teeth 1",
+         "treatmentInsertedTime":"03-22-2016 : 00:00",
+         "treatmentDoneTime":null,
+         "treatmentExpectedTime":"03-24-2016",
+         "amountPaid":null,
+         "amountExpected":100.00,
+         "status":"PENDING"
+      }
+   ]
+}

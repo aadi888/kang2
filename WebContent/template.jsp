@@ -90,7 +90,7 @@
   
          </td>
 <td>
-  <button  class="btn btn-primary btn-xs" id="appointmentsStatusChange" onclick="postAppointmentStatus({{appointmentID}},this.value)" data-toggle="modal" data-target="#statusModal">Change Status</button>
+  <button  class="btn btn-primary btn-xs" id="appointmentsStatusChange" onclick="postAppointmentStatus({{appointmentID}},{{patientID}},this.value)" data-toggle="modal" data-target="#statusModal">Change Status</button>
   
 </td>
   
@@ -108,7 +108,7 @@
      
       
 <td>
-  <button  class="btn btn-primary btn-xs" id="appointmentsRequesedStatusChange" onclick="postRequestedAppointmentStatus({{appointmentRequestID}},this.value)" data-toggle="modal" data-target="#statusModal">Change Status</button>
+  <button  class="btn btn-primary btn-xs" id="appointmentsRequesedStatusChange" onclick="postRequestedAppointmentStatus({{appointmentRequestID}},{{patientID}},this.value)" data-toggle="modal" data-target="#statusModal">Change Status</button>
   
 </td>
      
@@ -123,7 +123,7 @@
      
 <td align="center">
 <p style="margin-left: 40px;">{{counter}}</p> 
-<i class="flaticon-icon-{{status}}" style="color:#2c3e50;" id="" onclick="showMyTeethDetails({{counter}})" data-toggle="tooltip" title="{{status}}"></i><span class="tab"></span>  
+<i class="flaticon-icon-{{status}}" style="color:{{status}};" id="" onclick="showMyTeethDetails({{counter}})" data-toggle="tooltip" title="{{status}}"></i><span class="tab"></span>  
 </td>
    
      
@@ -134,7 +134,7 @@
      
 <td align="center">
 
-<i class="flaticon-icon-{{status}}" style="color:#2c3e50;" id="" onclick="showMyTeethDetails({{counter}})" data-toggle="tooltip" title="{{status}}" ></i><span class="tab"></span>  
+<i class="flaticon-icon-{{status}}" style="color:{{status}};" id="" onclick="showMyTeethDetails({{counter}})" data-toggle="tooltip" title="{{status}}" ></i><span class="tab"></span>  
 <p style="margin-left: 40px;">{{counter}}</p> 
 </td>
    
@@ -143,9 +143,12 @@
 
 <script type="text/template" id="teethDetailsTemp">
 
-      <td> {{TeethNumber}}</td>
-      <td>{{TeethName}}</td>
-      <td>{{Description}}</td>
+      <td>{{teethID}}</td>
+      <td>{{teethName}}</td>
+      <td>{{description}}</td>
+
+<td><a href="#" class="btn btn-success btn-xs" onclick="addNewTreatmentOnTeeth({{teethID}})">Add New Treatment <i class="fa fa-plus-circle" ></i></a></td>
+	  
 
 
 </script>
@@ -158,19 +161,14 @@
 {{note}}
 </td>
 <td>
-{{appointmentStartTime}}
+{{treatmentDoneTime}}
 </td>
 <td>
-{{amountexpected}}
+{{amountExpected}}
 </td>
 </tr>
 </script>
-<script type="text/template" id="teethNewTreatmentTemp">
-<td>
-<a href="#" class="btn btn-success btn-xs" data-toggle="modal" data-target="#treatmentModal">Add New Treatment <i class="fa fa-plus-circle" ></i></a>
 
-</td>
-</script>
 </head>
 
 </html>

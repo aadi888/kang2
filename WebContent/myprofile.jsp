@@ -22,6 +22,9 @@
  <script type="text/javascript" src="js/requestedappointments.js"></script>
  <script type="text/javascript" src="js/treatments.js"></script>
  <script type="text/javascript" src="js/insurances.js"></script>
+ <script type="text/javascript" src="js/myprofile.js"></script>
+ 
+ <script type="text/javascript" src="js/teethTreatments.js"></script>
  
  
  <%@include file="template.jsp" %>
@@ -481,7 +484,7 @@
 				
 <div class="list-group" ">
   
-   <h2> <i class="fa fa-gavel"></i> My Treatments </h2><br/> 
+   <h2> <i class="fa fa-gavel"></i> My Treatments <div id="" style="float:right;font-size: 70%; ">Total Price <p id="totalPrice"></p> </div></h2> <br/> 
  
   <div>
    <table>
@@ -514,6 +517,7 @@
       <th>Teeth Number</th>
       <th>Teeth Name</th>
       <th>Description</th>
+      <th></th>
    
      
      
@@ -905,7 +909,7 @@
   </div>
         
 <%@include file="footer.html" %>
- 
+
   
 </body>
 </html>

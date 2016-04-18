@@ -30,7 +30,7 @@ margin-left: 40px;
 }
 
 .flaticon-building:before { content: "\f100"; }
-.flaticon-icon-Normal:before { content: "\f101"; }
+.flaticon-icon-Green:before { content: "\f101"; }
 .flaticon-icon-30502:before { content: "\f102"; }
 .flaticon-icon-31045:before { content: "\f103"; }
 .flaticon-icon-45495:before { content: "\f104"; }
@@ -38,13 +38,13 @@ margin-left: 40px;
 .flaticon-icon-45679:before { content: "\f106"; }
 .flaticon-icon-65563:before { content: "\f107"; }
 .flaticon-icon-65570:before { content: "\f108"; }
-.flaticon-icon-65612:before { content: "\f109"; }
+.flaticon-icon-65630:before { content: "\f109"; }
 .flaticon-icon-77126:before { content: "\f10a"; }
 .flaticon-icon-84195:before { content: "\f10b"; }
-.flaticon-icon-91156:before { content: "\f10c"; }
+.flaticon-icon-Red:before { content: "\f10c"; }
 .flaticon-icon-92705:before { content: "\f10d"; }
 .flaticon-medical:before { content: "\f10e"; }
-.flaticon-icon-Extracted:before { content: "\f10f"; }
+.flaticon-icon-Black:before { content: "\f10f"; }
 .flaticon-medical-10:before { content: "\f110"; }
 .flaticon-medical-11:before { content: "\f111"; }
 .flaticon-medical-12:before { content: "\f112"; }
@@ -58,7 +58,7 @@ margin-left: 40px;
 .flaticon-medical-2:before { content: "\f11a"; }
 .flaticon-medical-20:before { content: "\f11b"; }
 .flaticon-medical-21:before { content: "\f11c"; }
-.flaticon-icon-Pending:before { content: "\f11d"; }
+.flaticon-medical-22:before { content: "\f11d"; }
 .flaticon-medical-23:before { content: "\f11e"; }
 .flaticon-medical-24:before { content: "\f11f"; }
 .flaticon-medical-3:before { content: "\f120"; }

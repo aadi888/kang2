@@ -5,11 +5,7 @@
 $(document).ready(function(){
 	 
 	showProfile();
-	get("rest/patient/personal","p");
-	get("rest/patient/address","a");
-	get("rest/patient/contact","c");
-	get("rest/patient/emergency","e");
-	
+	myprofile.getProfileData(("json/patient_personalinfo.json"));
 	 
 	
 	
