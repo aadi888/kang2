@@ -24,14 +24,14 @@
 [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
 [class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
   font-family: Flaticon;
-        font-size: 30px;
+        font-size: 25px;
 font-style: normal;
-margin-left: 40px;
+
 }
 
 .flaticon-building:before { content: "\f100"; }
-.flaticon-icon-Green:before { content: "\f101"; }
-.flaticon-icon-30502:before { content: "\f102"; }
+.flaticon-icon-Normal:before { content: "\f101"; }
+.flaticon-icon-ll:before { content: "\f102"; }
 .flaticon-icon-31045:before { content: "\f103"; }
 .flaticon-icon-45495:before { content: "\f104"; }
 .flaticon-icon-45603:before { content: "\f105"; }
@@ -41,10 +41,10 @@ margin-left: 40px;
 .flaticon-icon-65630:before { content: "\f109"; }
 .flaticon-icon-77126:before { content: "\f10a"; }
 .flaticon-icon-84195:before { content: "\f10b"; }
-.flaticon-icon-Red:before { content: "\f10c"; }
+.flaticon-icon-91156:before { content: "\f10c"; }
 .flaticon-icon-92705:before { content: "\f10d"; }
 .flaticon-medical:before { content: "\f10e"; }
-.flaticon-icon-Black:before { content: "\f10f"; }
+.flaticon-icon-Extracted:before { content: "\f10f"; }
 .flaticon-medical-10:before { content: "\f110"; }
 .flaticon-medical-11:before { content: "\f111"; }
 .flaticon-medical-12:before { content: "\f112"; }

@@ -21,15 +21,26 @@ var treatments = (function() {
         	 
         	 
         	 $('#totalPrice').append("<i class='fa fa-usd' aria-hidden='true'></i>"+data.total);
-        	  
-        	  $.each(data.teethStatus, function(key,val) {
+        	 
+        	/* $.each(data.patientTeethStatus, function(key,val) {
         		 
+        		 alert(data.patientTeethStatus[key]);
+        	 });*/
+        	  
+        	 
+        	 var temp=data.patientTeethStatus;
+        	 
+        	  $.each(data.treatmentStatus, function(key,val) {
+        	  
+        		  
         		  var template = $('#requestedTreatmentsTemp').html();
         		  
         		  var template12 = $('#requestedTreatmentsTemp12').html();
-        		 
-        		   data.counter=key;
-        		   data.status=val;
+        		    
+        		   data.counter=key; 
+        		   data.treatmentStatus=val;
+        		   data.patientTeethStatus=temp[key];
+        		   
         		     
         		    var html = Mustache.to_html(template, data);
         		    var html12 = Mustache.to_html(template12, data);

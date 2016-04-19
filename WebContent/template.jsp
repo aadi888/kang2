@@ -123,7 +123,7 @@
      
 <td align="center">
 <p style="margin-left: 40px;">{{counter}}</p> 
-<i class="flaticon-icon-{{status}}" style="color:{{status}};" id="" onclick="showMyTeethDetails({{counter}})" data-toggle="tooltip" title="{{status}}"></i><span class="tab"></span>  
+<i class="flaticon-icon-{{patientTeethStatus}}" style="color:{{treatmentStatus}};margin-left: 40px;" id="" onclick="showMyTeethDetails({{counter}})" data-toggle="tooltip" title="{{patientTeethStatus}}"></i><span class="tab"></span>  
 </td>
    
      
@@ -131,13 +131,13 @@
 
 <script type="text/template" id="requestedTreatmentsTemp12">
 
-     
+  
 <td align="center">
 
-<i class="flaticon-icon-{{status}}" style="color:{{status}};" id="" onclick="showMyTeethDetails({{counter}})" data-toggle="tooltip" title="{{status}}" ></i><span class="tab"></span>  
+<i class="flaticon-icon-{{patientTeethStatus}}" style="color:{{treatmentStatus}};margin-left: 40px;" id="" onclick="showMyTeethDetails({{counter}})" data-toggle="tooltip" title="{{patientTeethStatus}}" ></i><span class="tab"></span>  
 <p style="margin-left: 40px;">{{counter}}</p> 
 </td>
-   
+ 
      
 </script>
 
