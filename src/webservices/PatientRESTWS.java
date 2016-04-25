@@ -63,13 +63,16 @@ public class PatientRESTWS {
 	@Path("/personal")
 	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
 	
-	public void postXMLPatientPersonalInfo(@FormParam("firstName") String firstName,@FormParam("middleName") String middleName,@FormParam("lastName") String lastName,@FormParam("dateOfBirth") Date dateOfBirth)
+	public void postXMLPatientPersonalInfo(@FormParam("firstName") String firstName,@FormParam("middleName") String middleName,@FormParam("lastName") String lastName,@FormParam("dob") Date dob,@FormParam("message") String message,@FormParam("message2") String message2)
 	{
-		System.out.println("update Personal data ..");
+		System.out.println("update Personal data .." +message);
+		System.out.println("update Personal data .." +message2);
+	
 		
-		dao.setPatientsPersonal(firstName,middleName,lastName,dateOfBirth);
-		
-		
+		System.out.println("FIRST NAME " +firstName);
+		System.out.println("MIDDLE NAME " +middleName);
+		System.out.println("LAST NAME " +lastName);
+		System.out.println("DOB " +dob);
 		
 	}
 	
@@ -91,7 +94,7 @@ public class PatientRESTWS {
 	@Path("/contact")
 	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
 	
-	public void postXMLPatientContactInfo(@FormParam("phoneNumber") String phoneNumber)
+	public void postXMLPatientContactInfo(@FormParam("message") String phoneNumber)
 	{
 		System.out.println("update contact data .." +phoneNumber);
 	}

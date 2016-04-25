@@ -90,7 +90,7 @@
   
          </td>
 <td>
-  <button  class="btn btn-primary btn-xs" id="appointmentsStatusChange" onclick="postAppointmentStatus({{appointmentID}},{{patientID}},this.value)" data-toggle="modal" data-target="#statusModal">Change Status</button>
+  <button  class="btn btn-primary btn-xs" id="appointmentsStatusChange" onclick="postAppointmentStatus({{appointmentID}},{{patientID}},this.value)" data-toggle="modal" data-target="#statusModal" style="visibility:{{hidden}};">Change Status</button>
   
 </td>
   
@@ -108,7 +108,7 @@
      
       
 <td>
-  <button  class="btn btn-primary btn-xs" id="appointmentsRequesedStatusChange" onclick="postRequestedAppointmentStatus({{appointmentRequestID}},{{patientID}},this.value)" data-toggle="modal" data-target="#statusModal">Change Status</button>
+  <button  class="btn btn-primary btn-xs" id="appointmentsRequesedStatusChange" onclick="postRequestedAppointmentStatus({{appointmentRequestID}},{{patientID}},this.value)" data-toggle="modal" data-target="#statusModal" style="visibility:{{hidden}};">Change Status</button>
   
 </td>
      
@@ -134,7 +134,7 @@
   
 <td align="center">
 
-<i class="flaticon-icon-{{patientTeethStatus}}" style="color:{{treatmentStatus}};margin-left: 40px;" id="" onclick="showMyTeethDetails({{counter}})" data-toggle="tooltip" title="{{patientTeethStatus}}" ></i><span class="tab"></span>  
+<i class="flaticon-icon-{{patientTeethStatus}}"  style="color:{{treatmentStatus}};margin-left: 40px;" id="" onclick="showMyTeethDetails({{counter}})" data-toggle="tooltip" title="{{patientTeethStatus}}" ></i><span class="tab"></span>  
 <p style="margin-left: 40px;">{{counter}}</p> 
 </td>
  
@@ -153,18 +153,32 @@
 
 </script>
 <script type="text/template" id="teethDetailsTreatmentTemp">
+
+ 
+
 <tr>
 <td>
-{{status}}
+{{note}}
 </td>
 <td>
-{{note}}
+{{treatmentInsertedTime}}
 </td>
 <td>
 {{treatmentDoneTime}}
 </td>
 <td>
+{{treatmentExpectedTime}}
+</td>
+
+
+<td>
+{{amountPaid}}
+</td>
+<td>
 {{amountExpected}}
+</td>
+<td>
+{{status}}
 </td>
 </tr>
 </script>

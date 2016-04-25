@@ -92,7 +92,7 @@
               <a class="list-group-item" onclick="showAppointments()" href="javascript:void(0);">Appointments</a>
               <a class="list-group-item" onclick="showTreatments()" href="javascript:void(0);">Treatments</a>
               <a class="list-group-item" onclick="showInsurance()" href="javascript:void(0);">Insurance</a>
-              <a class="list-group-item" onclick="showPayment()" href="javascript:void(0);">Payment</a>
+              <a class="list-group-item" onclick="showPayment()" href="javascript:void(0);">Documents</a>
             </div>
           </div>
           
@@ -144,19 +144,19 @@
   
     <div class="form-group">
  <label class="control-label" for="disabledInput">First Name</label>
-  <input class="form-control" id="firstName"  type="text" placeholder="" name="firstName">
+  <input class="form-control" id="firstName1"  type="text" placeholder="" name="firstName1">
 </div>
 <div class="form-group">
  <label class="control-label" for="disabledInput">Middle Name</label>
-  <input class="form-control" id="middleName"  type="text" placeholder="" name="middleName">
+  <input class="form-control" id="middleName1"  type="text" placeholder="" name="middleName1">
 </div>
 <div class="form-group">
  <label class="control-label" for="disabledInput">Last Name</label>
-  <input class="form-control" id="lastName"  type="text" placeholder="" name="lastName" >
+  <input class="form-control" id="lastName1"  type="text" placeholder="" name="lastName1" >
 </div>
  <div class="form-group">
   <label class="control-label" for="disabledInput">DOB</label>
-  <input class="form-control" id="dateOfBirth" type="number" placeholder=""  name="dateOfBirth" >
+  <input class="form-control" id="dob1" type="number" placeholder=""  name="dob1" >
 </div>
  
 
@@ -164,7 +164,7 @@
   </div>
   </form>
   <div class="form-group">
-  <button  class="btn btn-primary" id="updatePersonal">Update</button>&nbsp;&nbsp;<i class="fa fa-spinner fa-pulse" style="font-size: 30px;visibility: hidden;" id="spinner"></i>
+  <button  class="btn btn-primary" id="updatePersonal" onclick="myprofile.sendPersonalProfileData('rest/patient/personal')">Update</button>&nbsp;&nbsp;<i class="fa fa-spinner fa-pulse" style="font-size: 30px;visibility: hidden;" id="spinner"></i>
   </div>
   </div>
   
@@ -425,7 +425,7 @@
       <th>Expected Amount</th>
       <th>Amount Paid</th>
       <th>Status</th>
-      <th></th>
+      <th>Change Status</th>
     </tr>
   </thead>
   
@@ -542,11 +542,18 @@
   <table class="table" align="center">
   <thead>
     <tr>
-      <th>Status</th>
-      <th>Note</th>
-      <th>Treatment Time</th>
-      <th>Amount Paid</th>
+    	<th>Note</th>
+      <th>Treatment Inserted</th>
+      <th>Treatment Done</th>
+      <th>Treatment Expected</th>
       
+      
+      <th>Amount Paid</th>
+      <th>Amount Expected</th>
+      <th>Status</th>
+      
+      
+     
    
      
      
@@ -591,82 +598,31 @@
 				
 <div class="list-group" ">
   
-   <h2> <i class="fa fa-money"></i> My Payments </h2><br/> 
-  <div class="col-sm-6">
-  <ul class="list-group">
-    <li class="list-group-item">
-     
-   
-    <p class="list-group-item-text">
-   
-    
-    
-    <div class="form-group">
-  <label class="control-label" for="disabledInput">Appointment Time </label>&nbsp;&nbsp;10/12/1992 <small>10:55 pm</small>
+   <h2> <i class="fa fa-file-pdf-o" aria-hidden="true"></i> My Documents <a href="" style="float: right;" data-toggle="modal" data-target="#documentModal" ><i class="fa fa-plus-circle"  >Add New</i></a></h2> <br/> 
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>File Name</th>
+      <th>Uploaded Date</th>
+      <th>View File</th>
+      
+    </tr>
+  </thead>
   
-</div>
-<div class="form-group">
-  <label class="control-label" for="disabledInput">Patient Name </label>&nbsp;&nbsp;Aadish
-  
-</div>
-<div class="form-group">
-  <label class="control-label" for="disabledInput">Treatement name</label>&nbsp;&nbsp;note
-  
-</div>
-<div class="form-group">
-  <label class="control-label" for="disabledInput">Expected Amount</label>&nbsp;&nbsp;200
-  
-</div>
-<div class="form-group">
-  <label class="control-label" for="disabledInput">Amount Paid</label>&nbsp;&nbsp;100
-  
-</div>
+<tbody id="#">
 
- 
-        
+  </tbody>
+  </table>
+  
+  
+  
+</div>
+</div>
      
-    </li> 
-  </ul>
-  </div>
-   <div class="col-sm-6">
-  <ul class="list-group">
-    <li class="list-group-item">
-     
-   
-    <p class="list-group-item-text">
-   
-    
-    
-    <div class="form-group">
-  <label class="control-label" for="disabledInput">Appointment Time </label>&nbsp;&nbsp;10/12/1992 <small>10:55 pm</small>
-  
-</div>
-<div class="form-group">
-  <label class="control-label" for="disabledInput">Patient Name </label>&nbsp;&nbsp;Aadish
-  
-</div>
-<div class="form-group">
-  <label class="control-label" for="disabledInput">Treatement name</label>&nbsp;&nbsp;note
-  
-</div>
-<div class="form-group">
-  <label class="control-label" for="disabledInput">Expected Amount</label>&nbsp;&nbsp;200
-  
-</div>
-<div class="form-group">
-  <label class="control-label" for="disabledInput">Amount Paid</label>&nbsp;&nbsp;100
-  
-</div>
 
- 
-        
-     
-    </li> 
-  </ul>
   </div>
-</div>
-</div>
-          		
+         		
           		
 
           		</div>
@@ -695,14 +651,15 @@
       <form id="sendMessage1" name="sendMessage1" class="sendMessage1">
       <div>
       
-        <textarea class="form-control" rows="3" id="textArea" name="textArea" placeholder="type your message here.." maxlength="255"></textarea>
+        <textarea class="form-control" rows="3" id="message1" name="message1" placeholder="type your message here.." maxlength="255"></textarea>
         <span class="help-block">Maximum 255 characters.</span>
       </div>
+      <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
       </form>
     </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary" onclick="sentmessages.sendMessage('json/patient_insurances.json')" >Send</button>
+          <button type="button" class="btn btn-primary" onclick="sentmessages.sendMessage('rest/patient/personal')" >Send</button>
         </div>
       </div>
       
@@ -902,6 +859,31 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-primary" >Send</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <!-- Modal new message -->
+  <div class="modal fade" id="documentModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Add New Document</h4>
+        </div>
+        <div class="modal-body">
+         
+          <div class="form-group">
+ <label class="control-label" for="disabledInput">(.pdf , .docx , .txt , .jpg etc)</label>
+  <input class="form-control"  type="file"  >
+</div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" >Attach</button>
         </div>
       </div>
       

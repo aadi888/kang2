@@ -20,6 +20,11 @@ var requestedappointments = (function() {
        		  var template = $('#requestedAppointmentsTemp').html();
        		  
        		  val.counter=i;
+       		if(val.status=='ACCEPTED')
+			   {
+			    
+			   	val.hidden="hidden";
+			   }
        		  i++;
        		    var html = Mustache.to_html(template, val);
        		    $('#requestedAppointmentsForTemp').append(html);

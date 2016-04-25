@@ -65,26 +65,23 @@ var myprofile = (function() {
         });
     }
     
-    var sendProfileData = function(path) {
-    	 
-    	alert("not working..");
+    var sendPersonalProfileData = function(path) {
     	
-    	
-    	
-    	
-    	
-      /*  $.ajax({
-            url: path,
-            method: 'POST'
-        }).then(function(data) {
-            myprofiledata = data;
-            displayProfileData(myprofiledata);
-        });*/
+    	   $.ajax({
+               url: path,
+               method: 'POST',
+               data:{firstName : $('#firstName1').val(),middleName : $('#middleName1').val(),lastName : $('#lastName1').val(),dob : $('#dob1').val()}
+           }).then(function(data) {
+        	    showProfile();
+        	   myprofile.getProfileData("json/patient_personalinfo.json");
+           	
+                
+           });
     }
     return {
         getProfileData: getProfileData,
         displayProfileData: displayProfileData,
-        sendProfileData: sendProfileData
+        sendPersonalProfileData: sendPersonalProfileData
         
     };
 }());

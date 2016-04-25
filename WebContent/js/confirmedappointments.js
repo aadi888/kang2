@@ -19,6 +19,12 @@ var confirmedappointments = (function() {
               
        		  var template = $('#appointmentsTemp').html();
        		  val.counter=i;
+       		   if(val.status=='COMPLETED')
+       			   {
+       			    
+       			   	val.hidden="hidden";
+       			   }
+       		  
        		  i++;
        		    var html = Mustache.to_html(template, val);
        		    $('#appointmentsForTemp').append(html);

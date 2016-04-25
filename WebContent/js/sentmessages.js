@@ -37,19 +37,16 @@ var sentmessages = (function() {
     
     var sendMessage = function(path) {
     	 
-    	alert("not working..");
-    	
-    	
-    	
-    	
-    	
-      /*  $.ajax({
+       $.ajax({
             url: path,
-            method: 'POST'
+            method: 'POST',
+            data:{message : $('#message1').val()}
         }).then(function(data) {
-            messagesData = data;
-            displayMessages(messagesData);
-        });*/
+        	$('#messageModal').modal('toggle');
+        	sentmessages.getMessages("json/patient_sentmessages.json");
+        	
+             
+        });
     }
     return {
         getMessages: getMessages,
